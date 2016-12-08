@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--plugin_css-->
+		<link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css" />
+		
+		<!--auto_css-->
+		<link rel="stylesheet" href="lib/common/common.css" />
+		<link rel="stylesheet" href="lib/page_css/myCar.css" />
+		
+		<!--plugin_js-->
+		
+		<script type="text/javascript" src="lib/jquery/jquery-2.1.1.min.js" ></script>
+		
+		<!--auto_js-->
+		<script type="text/javascript" src="lib/page_js/cart.js" ></script>
+		<script type="text/javascript" src="lib/js/base.js" ></script>
+		<script type="text/javascript" src="js/login.js" ></script>
+		<script type="text/javascript" src="lib/common/common.js" ></script>
+		
+		
+		<script type="text/javascript">
+			$(function(){
+				//从公共文件夹得到每个页面的公共的头部部分
+				$(".header").load("common_head.html?" + Math.random());
+				
+				
+				
+				
+				//从公共文件夹得到每个页面的公共的尾部部分
+				$(".footer").load("common_footer.html?" + Math.random());
+			})
+		</script>
+		
+	</head>
+	<body>
+		<!--header部分-->
+		<div class="header"></div>
+		
+		<!--logo部分-->
+		<div class="logo">
+			<div class="nav-bar clearfix">
+				<div class="brand">
+					<a href="main.html"><img src="img/register_1.jpg" /></a>
+				</div>
+				<div class="process">
+					<img src="img/process.jpg" />
+				</div>
+			</div>
+		</div>
+		
+		<div class="shadow"></div>
+		
+		<!--中部开始-->
+		<div class="cart">
+			<div class="cart-main">
+				<div class="mycar clearfix">
+					<p class="pull-left">我的购物车</p>
+					<a class="pull-right" href="main_fruit.html">继续逛逛></a>
+				</div>
+			</div>
+			<div class="myProduct">
+				<!--头部-->
+				<div class="cart-head clearfix">
+					<div class="pull-left cart-good">
+						<span>商品</span>
+					</div>
+					<div class="pull-left cart-size">
+						<span>规格</span>
+					</div>
+					<div class="pull-left cart-price">
+						<span>单价(元)</span>
+					</div>
+					<div class="pull-left cart-number">
+						<span>数量</span>
+					</div>
+					<div class="pull-left cart-sum">
+						<span>原价(元)</span>
+					</div>
+					<div class="pull-left cart-action">
+						<span>操作</span>
+					</div>
+				</div>
+				<!--中部-->
+				<div class="cart-center">
+					<ul class="list-good">
+						<!--先写两个li当做样式-->
+						<li>
+							<div class="cart-box clearfix">
+								<div class="cart-img pull-left">
+									<a><img src="img/global_1.jpg"/></a>
+								</div>
+								<div class="cart-name pull-left">
+									<p>
+										<a>佳沛新西兰阳光金奇异果</a>
+									</p>
+								</div>
+								<div class="spec-num pull-left">
+									<p>6个</p>
+								</div>
+								<div class="price-single pull-left">
+									<p>￥49.90</p>
+								</div>
+								<div class="good-num-change pull-left clearfix">
+									<span class="pull-left btn-minus">-</span>
+									<input class="pull-left" disabled="" type="tel" name="qty" value="1">
+									<span class="pull-left btn-plus">+</span>
+								</div>
+								<div class="sum pull-left">
+									<p>￥49.90</p>
+								</div>
+								<div class="delete pull-left">
+									<p>删除</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="cart-box clearfix">
+								<div class="cart-img pull-left">
+									<a><img src="img/global_1.jpg"/></a>
+								</div>
+								<div class="cart-name pull-left">
+									<p>
+										<a>佳沛新西兰阳光金奇异果</a>
+									</p>
+								</div>
+								<div class="spec-num pull-left">
+									<p>6个</p>
+								</div>
+								<div class="price-single pull-left">
+									<p>￥49.90</p>
+								</div>
+								<div class="good-num-change pull-left clearfix">
+									<span class="pull-left btn-minus">-</span>
+									<input class="pull-left" disabled="" type="tel" name="qty" value="1">
+									<span class="pull-left btn-plus">+</span>
+								</div>
+								<div class="sum pull-left">
+									<p>￥49.90</p>
+								</div>
+								<div class="delete pull-left">
+									<p>删除</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="cart-box clearfix">
+								<div class="cart-img pull-left">
+									<a><img src="img/global_1.jpg"/></a>
+								</div>
+								<div class="cart-name pull-left">
+									<p>
+										<a>佳沛新西兰阳光金奇异果</a>
+									</p>
+								</div>
+								<div class="spec-num pull-left">
+									<p>6个</p>
+								</div>
+								<div class="price-single pull-left">
+									<p>￥49.90</p>
+								</div>
+								<div class="good-num-change pull-left clearfix">
+									<span class="pull-left btn-minus">-</span>
+									<input class="pull-left" disabled="" type="tel" name="qty" value="1">
+									<span class="pull-left btn-plus">+</span>
+								</div>
+								<div class="sum pull-left">
+									<p>￥49.90</p>
+								</div>
+								<div class="delete pull-left">
+									<p>删除</p>
+								</div>
+							</div>
+						</li>
+					</ul>
+					
+					<!--实现购物车中的商品的“增加、减少、删除”功能-->
+					<script type="text/javascript">
+						$(function(){
+							//给每个购物车的中的a添加一个链接
+							$.each($(".cart-box a"), function(i,val) {
+								$(this)[0].href = "gooddetails.html";
+							});
+							
+							
+							//给购物车中的“+”和“-”和添加事件
+							$(".cart-box .btn-minus").click(function(){
+								//“-”功能的实现
+								
+								//得到“-”号的下一个元素，也就是input中value
+								var current_gNum = $(this).next().val();
+								//得到对应商品的单价
+								var single_price = $(this).parent().prev().text();
+								single_price = parseFloat(single_price.replace("￥",""));
+								//得到放置对应商品的总的价格的元素
+								console.log($(this).parent().next().text());
+								if(current_gNum == 1){//如果当前数目为1
+									$(this).parent().next().children().text("￥" + single_price);
+								}else{
+									current_gNum--;
+									$(this).next().val(current_gNum);
+									var sum = single_price * current_gNum;
+									$(this).parent().next().children().text("￥" + sum);
+								}
+								show(carculator().total,carculator().money);
+							});
+							
+							$(".cart-box .btn-plus").click(function(){
+								//“+”功能的实现
+								
+								//得到“+”号的上一个元素，也就是input中value
+								var current_gNum = $(this).prev().val();
+								var single_price = $(this).parent().prev().text();
+								single_price = parseFloat(single_price.replace("￥",""));
+								current_gNum++;
+								var sum = single_price * current_gNum;
+								$(this).parent().next().children().text("￥" + sum);
+								$(this).prev().val(current_gNum);
+								
+								show(carculator().total,carculator().money);
+							});
+							
+							function show(total,money){
+								
+								$(".cart-foot em").text(total);
+								$(".all-order").text(money);
+								
+							}	
+							
+							//封装一个函数：用来计算得到当前所有的商品的数目和得到当前所购商品的总价
+							function carculator(){
+								//得到当前所有的商品的数目
+								var product_total = 0;
+								$.each($("input"), function() {
+									product_total += parseInt($(this).val());
+								});
+								
+								//得到当前所购商品的总价
+								var product_money = 0;
+								$.each($(".sum p"), function() {
+									product_money += parseFloat($(this).text().replace("￥",""));
+								});
+								
+								return {"total":product_total,"money":product_money};
+							}
+							
+							//初始化：
+							show(carculator().total,carculator().money);
+							
+						})
+					</script>
+				
+				
+				</div>
+				<!--尾部-->
+				<div class="cart-foot clearfix">
+					<div class="pull-right cart-pay clearfix">
+						<span class="pull-left">
+							已选择<em>6件</em>商品                                      |             订单金额
+						</span>
+						<span class="pull-left all-order">￥217.80</span>
+						<a class="pull-left go-pay">去结算</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--删除商品弹出的对话框-->
+		<div class="cover"></div>
+		<div class="shop-cart">
+			<div class="shop-top">
+				确定删除该商品吗？
+				<div class="cha"><img src="img/cha.png" class="close"/></div>
+			</div>
+			<div class="shop-content">
+				
+				<div class="buy clearfix">
+                    <div class="fr-buy">
+                    	<a role="button" class="del_btn">确定</a>
+                    </div>
+                    <div class="fr-add">
+                        <a title="加入购物车" class="close">取消</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--点击“cha”和“取消”的事件：取消删除商品事件-->
+		<script type="text/javascript">
+			/*$(function(){
+				
+				$(".close").click(function(){
+					
+					$(".shop-cart").css("display","none");
+					$(".cover").css("display","none");
+				});
+				
+				$(".del_btn").click(function(){
+					
+				});
+			})*/
+		</script>
+		
+		<!--footer部分-->
+		<div class="footer"></div>
+	</body>
+</html>

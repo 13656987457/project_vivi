@@ -1,0 +1,119 @@
+.cover{
+	display: none;
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.5;
+}
+.shop-cart{
+	display: none;
+	position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 99999;
+    width: 512px;
+    height: 276px;
+    padding: 6px;
+    margin: -144px 0 0 -262px;
+    border: 8px;
+    border-color: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.16);
+}
+.shop-cart .shop-top{
+	width: 495px;
+	height: 40px;
+	padding-right: 17px;
+    background-color: #eaeaea;
+}
+.shop-cart .shop-top .cha{
+	float: right;
+	margin-top: 10px;
+	width: 25px;
+	height: 24px;
+	cursor: pointer;
+}
+.shop-cart .shop-content{
+	width: 512px;
+	height: 236px;
+	background: #fff;
+}
+.shop-cart .shop-content .content_title{
+	width: 332px;
+	height: 68px;
+	padding: 28px 90px 0;
+    margin-bottom: 22px;
+}
+.shop-cart .shop-content .content_title .success{
+	float: left;
+	width: 60px;
+    height: 68px;
+    background: url(../img/common.png) no-repeat -8px -247px;
+}
+.shop-cart .shop-content .content_title .adds{
+	float: left;
+    font-size: 30px;
+    margin: 13px 0;
+    font-family: "Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    color: #555;
+    white-space: nowrap;
+    padding-left: 20px;
+}
+.shop-cart .shop-content .row_2{
+	font-size: 18px;
+    font-family: "Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    color: #999;
+    white-space: nowrap;
+    padding-left: 4px;
+    text-align: center;
+}
+.shop-cart .shop-content .row_2 em{
+	color: #f6ab00;
+    font-style: normal;
+}
+.shop-cart .shop-content .buy{
+	padding: 28px;
+    padding-bottom: 25px;
+}
+.shop-cart .shop-content .buy .fr-buy{
+	float: left;
+	margin-right: 11px;
+    margin-left: 70px;
+}
+.shop-cart .shop-content .buy .fr-buy a{
+    color: #64a131;
+    background: #f5ffed;
+    border: 1px solid #64a131;
+    border-radius: 4px;
+    display: block;
+    width: 113px;
+    height: 18px;
+    font-family: "Hiragino Sans GB","microsoft yahei",sans-serif;
+    font-size: 16px;
+    text-align: center;
+    line-height: 18px;
+    padding: 10px 16px;
+    font-weight: lighter;
+    cursor: pointer;
+}
+.shop-cart .shop-content .buy .fr-add{
+	float: left;	
+}
+.shop-cart .shop-content .buy .fr-add a{
+	border-radius: 4px;
+    color: #eff4ec;
+    background: #64a131;
+    border-color: #64a131;
+    display: block;
+    width: 113px;
+    height: 18px;
+    font-family: "Hiragino Sans GB","microsoft yahei",sans-serif;
+    font-size: 16px;
+    text-align: center;
+    line-height: 18px;
+    font-weight: lighter;
+    padding: 10px 16px;
+    cursor: pointer;
+}

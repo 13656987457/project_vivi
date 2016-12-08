@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--plugin_css-->
+		<link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css" />
+		
+		<!--auto_css-->
+		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="lib/common/common.css" />
+		
+		<!--plugin_js-->
+		
+		<script type="text/javascript" src="lib/jquery/jquery-2.1.1.min.js" ></script>
+		
+		<!--auto_js-->
+		<script type="text/javascript" src="js/register.js" ></script>
+		<script type="text/javascript" src="lib/page_js/cart.js" ></script>
+		<script src="lib/js/move.js"></script>
+		<script type="text/javascript" src="lib/common/common.js" ></script>
+		<script type="text/javascript" src="lib/js/base.js" ></script>
+		<script type="text/javascript" src="lib/page_js/main.js" ></script>
+		
+		<script type="text/javascript">
+			$(function(){
+				
+				//从公共文件夹得到每个页面的公共的头部部分
+				$(".header").load("common_head.html?" + Math.random());
+				
+				//从公共文件夹得到每个页面的公共的logo部分
+				$(".logo").load("main_common.html?" + Math.random());
+				
+				//给页面中的a元素添加链接地址
+				$.each($(".show-ad a"), function() {
+					$(this)[0].href = "gooddetails.html";
+				});
+				
+				
+				$.each($(".goodlist a"), function() {
+					$(this)[0].href = "gooddetails.html";
+				});
+				
+				//======>接下来就是将商品保存在cookie中，将其加入到购物车中去：
+				
+				
+				//从公共文件夹得到每个页面的公共的尾部部分
+				$(".footer").load("common_footer.html?" + Math.random());
+			});
+		</script>
+	</head>
+	<body>
+		<!--header部分-->
+		<div class="header"></div>
+		
+		<!--logo部分-->
+		<div class="logo"></div>
+		
+		<!--轮播图部分-->
+		<div id="box">
+			<ul id="list">
+				<li><img src="img/banner.jpg"/></li>
+				<li><img src="img/banner_2.jpg"/></li>
+				<li><img src="img/banner_3.jpg"/></li>
+				<li><img src="img/banner_4.jpg"/></li>
+				<li><img src="img/banner_5.jpg"/></li>
+				<li><img src="img/banner_6.jpg"/></li>
+			</ul>
+			<ul id="list2">
+				<li class="active "></li>
+				<li ></li>
+				<li ></li>
+				<li ></li>
+				<li ></li>
+				<li ></li>
+			</ul>
+		</div>
+		
+		<!--四种推荐的水果-->
+		<div class="show-ad"> 
+			<ul class="clearfix">
+				<li><a><img src="img/niuyouguo.jpg"/></a></li>
+				<li><a><img src="img/jinguo.jpg"/></a></li>
+				<li><img src="img/apple.jpg"/></a></li>
+				<li class="last"><a><img src="img/shiliu.jpg"/></a></li>
+			</ul>
+		</div>
+			
+		</script>
+		
+		<!--果园推荐-->
+		<div class="fruitkinds">
+			<div class="till clearfix">
+				<div class="textpic"><img src="img/till.png"/></div>
+				<a href="main_fruit.html">更多<span class="fa fa-angle-double-right"></span></a>
+			</div>
+			<div class="goodlist clearfix">
+				<ul class="clearfix">
+					<li class="main-product">
+						<div>
+							<a href="gooddetails.html" target="_blank"><img src="img/yingtao.jpg"/></a>
+						</div>
+					</li>
+					<li class="pro-product">
+						<div class="s-img">
+							<a><img src="img/pear.jpg"/></a>
+						</div>
+						<div class="s-info">
+							<div class="s-name">荷兰青啤梨</div>
+							<div class="s-price">￥39.00/4个</div>
+							<div class="s-car"></div>
+						</div>
+						<div class="s-promote">
+							<span>第二件9.9</span>
+						</div>
+					</li>
+					<li class="pro-product">
+						<div class="s-img">
+							<a><img src="img/orange.jpg"/></a>
+						</div>
+						<div class="s-info">
+							<div class="s-name">荷兰青啤梨</div>
+							<div class="s-price">￥39.00/4个</div>
+							<div class="s-car"></div>
+						</div>
+						<div class="newly s-promote">
+							<span>新品</span>
+						</div>
+					</li>
+					<li class="pro-product">
+						<div class="s-img">
+							<a><img src="img/snackapple.jpg"/></a>
+						</div>
+						<div class="s-info">
+							<div class="s-name">荷兰青啤梨</div>
+							<div class="s-price">￥39.00/4个</div>
+							<div class="s-car"></div>
+						</div>
+						<div class="newly s-promote">
+							<span>新品</span>
+						</div>
+					</li>
+					<li class="pro-product">
+						<div class="s-img">
+							<a><img src="img/bluemei.jpg"/></a>
+						</div>
+						<div class="s-info">
+							<div class="s-name">荷兰青啤梨</div>
+							<div class="s-price">￥39.00/4个</div>
+							<div class="s-car"></div>
+						</div>
+						<div class="s-promote">
+							<span>买两盒送两盒</span>
+						</div>
+					</li>
+					<li class="pro-product">
+						<div class="s-img">
+							<a><img src="img/pear.jpg"/></a>
+						</div>
+						<div class="s-info">
+							<div class="s-name">荷兰青啤梨</div>
+							<div class="s-price">￥39.00/4个</div>
+							<div class="s-car"></div>
+						</div>
+						<div class="s-promote">
+							<span>第二件9.9</span>
+						</div>
+					</li>
+					<li class="pro-product">
+						<div class="s-img">
+							<a><img src="img/orange.jpg"/></a>
+						</div>
+						<div class="s-info">
+							<div class="s-name">荷兰青啤梨</div>
+							<div class="s-price">￥39.00/4个</div>
+							<div class="s-car"></div>
+						</div>
+						<div class="newly s-promote">
+							<span>新品</span>
+						</div>
+					</li>
+					<li class="pro-product">
+						<div class="s-img">
+							<a><img src="img/snackapple.jpg"/></a>
+						</div>
+						<div class="s-info">
+							<div class="s-name">荷兰青啤梨</div>
+							<div class="s-price">￥39.00/4个</div>
+							<div class="s-car"></div>
+						</div>
+						<div class="s-promote">
+							<span>第二件9.9</span>
+						</div>
+					</li>
+					<li class="pro-product">
+						<div class="s-img">
+							<a><img src="img/bluemei.jpg"/></a>
+						</div>
+						<div class="s-info">
+							<div class="s-name">荷兰青啤梨</div>
+							<div class="s-price">￥39.00/4个</div>
+							<div class="s-car"></div>
+						</div>
+						<div class="s-promote">
+							<span>买两盒送两盒</span>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<!--全球鲜果-->
+		<div class="fruitkinds">
+			<div class="till clearfix">
+				<div class="textpic"><img src="img/gloabalfruit.png"/></div>
+				<a href="main_fruit.html">更多<span class="fa fa-angle-double-right"></span></a>
+			</div>
+			<div class="goodlist clearfix">
+				<ul class="clearfix">
+					<li class="pro-product">
+						<div class="s-img">
+							<a><img src="img/pear.jpg"/></a>
+						</div>
+						<div class="s-info">
+							<div class="s-name">荷兰青啤梨</div>
+							<div class="s-price">￥39.00/4个</div>
+							<div class="s-car"></div>
+						</div>
+						<div class="s-promote">
+							<span>第二件9.9</span>
+						</div>
+					</li>
+					<li class="pro-product">
+						<div class="s-img">
+							<a><img src="img/global_1.jpg"/></a>
+						</div>
+						<div class="s-info">
+							<div class="s-name">荷兰青啤梨</div>
+							<div class="s-price">￥39.00/4个</div>
+							<div class="s-car"></div>
+						</div>
+						<div class="s-promote">
+							<span>第二件9.9</span>
+						</div>
+					</li>
+					<li class="pro-product">
+						<div class="s-img">
+							<a><img src="img/global_2.jpg"/></a>
+						</div>
+						<div class="s-info">
+							<div class="s-name">荷兰青啤梨</div>
+							<div class="s-price">￥39.00/4个</div>
+							<div class="s-car"></div>
+						</div>
+						<div class="newly s-promote">
+							<span>新品</span>
+						</div>
+					</li>
+					<li class="pro-product">
+						<div class="s-img">
+							<a><img src="img/snackapple.jpg"/></a>
+						</div>
+						<div class="s-info">
+							<div class="s-name">荷兰青啤梨</div>
+							<div class="s-price">￥39.00/4个</div>
+							<div class="s-car"></div>
+						</div>
+						<div class="newly s-promote">
+							<span>新品</span>
+						</div>
+					</li>
+					<li class="pro-product">
+						<div class="s-img">
+							<a><img src="img/global_3.jpg"/></a>
+						</div>
+						<div class="s-info">
+							<div class="s-name">荷兰青啤梨</div>
+							<div class="s-price">￥39.00/4个</div>
+							<div class="s-car"></div>
+						</div>
+						<div class="s-promote">
+							<span>买两盒送两盒</span>
+						</div>
+					</li>
+					<li class="pro-product">
+						<div class="s-img">
+							<a><img src="img/global_4.jpg"/></a>
+						</div>
+						<div class="s-info">
+							<div class="s-name">荷兰青啤梨</div>
+							<div class="s-price">￥39.00/4个</div>
+							<div class="s-car"></div>
+						</div>
+						<div class="s-promote">
+							<span>第二件9.9</span>
+						</div>
+					</li>
+					<li class="pro-product">
+						<div class="s-img">
+							<a><img src="img/orange.jpg"/></a>
+						</div>
+						<div class="s-info">
+							<div class="s-name">荷兰青啤梨</div>
+							<div class="s-price">￥39.00/4个</div>
+							<div class="s-car"></div>
+						</div>
+						<div class="newly s-promote">
+							<span>新品</span>
+						</div>
+					</li>
+					<li class="pro-product">
+						<div class="s-img">
+							<a><img src="img/global_1.jpg"/></a>
+						</div>
+						<div class="s-info">
+							<div class="s-name">荷兰青啤梨</div>
+							<div class="s-price">￥39.00/4个</div>
+							<div class="s-car"></div>
+						</div>
+						<div class="s-promote">
+							<span>第二件9.9</span>
+						</div>
+					</li>
+					<li class="pro-product">
+						<div class="s-img">
+							<a><img src="img/global_2.jpg"/></a>
+						</div>
+						<div class="s-info">
+							<div class="s-name">荷兰青啤梨</div>
+							<div class="s-price">￥39.00/4个</div>
+							<div class="s-car"></div>
+						</div>
+						<div class="s-promote">
+							<span>买两盒送两盒</span>
+						</div>
+					</li>
+					<li class="pro-product">
+						<div class="s-img">
+							<a><img src="img/bluemei.jpg"/></a>
+						</div>
+						<div class="s-info">
+							<div class="s-name">荷兰青啤梨</div>
+							<div class="s-price">￥39.00/4个</div>
+							<div class="s-car"></div>
+						</div>
+						<div class="s-promote">
+							<span>买两盒送两盒</span>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="ad">
+				<a><img src="img/blue_ad.jpg"/></a>
+			</div>
+		</div>
+		
+		<!--生闲美食-->
+		<div class="fruitkinds">
+			<div class="till clearfix">
+				<div class="textpic"><img src="img/freshfood.png"/></div>
+				<a href="main_fruit.html">更多<span class="fa fa-angle-double-right"></span></a>
+			</div>
+			<div class="goodlist clearfix">
+				<ul class="clearfix">
+					<li class="pro-product">
+						<div class="s-img">
+							<a><img src="img/fresh_1.jpg"/></a>
+						</div>
+						<div class="s-info">
+							<div class="s-name">荷兰青啤梨</div>
+							<div class="s-price">￥39.00/4个</div>
+							<div class="s-car"></div>
+						</div>
+						<div class="s-promote">
+							<span>第二件9.9</span>
+						</div>
+					</li>
+					<li class="pro-product">
+						<div class="s-img">
+							<a><img src="img/fresh_2.jpg"/></a>
+						</div>
+						<div class="s-info">
+							<div class="s-name">荷兰青啤梨</div>
+							<div class="s-price">￥39.00/4个</div>
+							<div class="s-car"></div>
+						</div>
+						<div class="s-promote">
+							<span>第二件9.9</span>
+						</div>
+					</li>
+					<li class="pro-product">
+						<div class="s-img">
+							<a><img src="img/fresh_3.jpg"/></a>
+						</div>
+						<div class="s-info">
+							<div class="s-name">荷兰青啤梨</div>
+							<div class="s-price">￥39.00/4个</div>
+							<div class="s-car"></div>
+						</div>
+						<div class="newly s-promote">
+							<span>新品</span>
+						</div>
+					</li>
+					<li class="pro-product">
+						<div class="s-img">
+							<a><img src="img/fresh_4.jpg"/></a>
+						</div>
+						<div class="s-info">
+							<div class="s-name">荷兰青啤梨</div>
+							<div class="s-price">￥39.00/4个</div>
+							<div class="s-car"></div>
+						</div>
+						<div class="newly s-promote">
+							<span>新品</span>
+						</div>
+					</li>
+					<li class="pro-product">
+						<div class="s-img">
+							<a><img src="img/fresh_2.jpg"/></a>
+						</div>
+						<div class="s-info">
+							<div class="s-name">荷兰青啤梨</div>
+							<div class="s-price">￥39.00/4个</div>
+							<div class="s-car"></div>
+						</div>
+						<div class="s-promote">
+							<span>买两盒送两盒</span>
+						</div>
+					</li>
+					<li class="pro-product">
+						<div class="s-img">
+							<a><img src="img/fresh_3.jpg"/></a>
+						</div>
+						<div class="s-info">
+							<div class="s-name">荷兰青啤梨</div>
+							<div class="s-price">￥39.00/4个</div>
+							<div class="s-car"></div>
+						</div>
+						<div class="s-promote">
+							<span>第二件9.9</span>
+						</div>
+					</li>
+					<li class="pro-product">
+						<div class="s-img">
+							<a><img src="img/fresh_5.jpg"/></a>
+						</div>
+						<div class="s-info">
+							<div class="s-name">荷兰青啤梨</div>
+							<div class="s-price">￥39.00/4个</div>
+							<div class="s-car"></div>
+						</div>
+						<div class="newly s-promote">
+							<span>新品</span>
+						</div>
+					</li>
+					<li class="pro-product">
+						<div class="s-img">
+							<a><img src="img/fresh_6.jpg"/></a>
+						</div>
+						<div class="s-info">
+							<div class="s-name">荷兰青啤梨</div>
+							<div class="s-price">￥39.00/4个</div>
+							<div class="s-car"></div>
+						</div>
+						<div class="s-promote">
+							<span>第二件9.9</span>
+						</div>
+					</li>
+					<li class="pro-product">
+						<div class="s-img">
+							<a><img src="img/fresh_4.jpg"/></a>
+						</div>
+						<div class="s-info">
+							<div class="s-name">荷兰青啤梨</div>
+							<div class="s-price">￥39.00/4个</div>
+							<div class="s-car"></div>
+						</div>
+						<div class="s-promote">
+							<span>买两盒送两盒</span>
+						</div>
+					</li>
+					<li class="pro-product">
+						<div class="s-img">
+							<a><img src="img/fresh_6.jpg"/></a>
+						</div>
+						<div class="s-info">
+							<div class="s-name">荷兰青啤梨</div>
+							<div class="s-price">￥39.00/4个</div>
+							<div class="s-car"></div>
+						</div>
+						<div class="s-promote">
+							<span>买两盒送两盒</span>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="ad">
+				<a><img src="img/freshfood_ad.jpg"/></a>
+			</div>
+		</div>
+		<!--礼品卡券-->
+		<div class="fruitkinds">
+			<div class="till clearfix">
+				<div class="textpic"><img src="img/gift_card.png"/></div>
+				<a href="main_fruit.html">更多<span class="fa fa-angle-double-right"></span></a>
+			</div>
+			<div class="goodlist clearfix">
+				<ul class="clearfix">
+					<li class="pro-product">
+						<div class="s-img">
+							<a><img src="img/gift_1.jpg"/></a>
+						</div>
+						<div class="s-info">
+							<div class="s-name">荷兰青啤梨</div>
+							<div class="s-price">￥39.00/4个</div>
+							<div class="s-car"></div>
+						</div>
+						<div class="s-promote">
+							<span>第二件9.9</span>
+						</div>
+					</li>
+					<li class="pro-product">
+						<div class="s-img">
+							<a><img src="img/gift_2.jpg"/></a>
+						</div>
+						<div class="s-info">
+							<div class="s-name">荷兰青啤梨</div>
+							<div class="s-price">￥39.00/4个</div>
+							<div class="s-car"></div>
+						</div>
+						<div class="s-promote">
+							<span>第二件9.9</span>
+						</div>
+					</li>
+					<li class="pro-product">
+						<div class="s-img">
+							<a><img src="img/gift_1.jpg"/></a>
+						</div>
+						<div class="s-info">
+							<div class="s-name">荷兰青啤梨</div>
+							<div class="s-price">￥39.00/4个</div>
+							<div class="s-car"></div>
+						</div>
+						<div class="newly s-promote">
+							<span>新品</span>
+						</div>
+					</li>
+					<li class="pro-product">
+						<div class="s-img">
+							<a><img src="img/gift_2.jpg"/></a>
+						</div>
+						<div class="s-info">
+							<div class="s-name">荷兰青啤梨</div>
+							<div class="s-price">￥39.00/4个</div>
+							<div class="s-car"></div>
+						</div>
+						<div class="newly s-promote">
+							<span>新品</span>
+						</div>
+					</li>
+					<li class="pro-product">
+						<div class="s-img">
+							<a><img src="img/gift_3.jpg"/></a>
+						</div>
+						<div class="s-info">
+							<div class="s-name">荷兰青啤梨</div>
+							<div class="s-price">￥39.00/4个</div>
+							<div class="s-car"></div>
+						</div>
+						<div class="s-promote">
+							<span>买两盒送两盒</span>
+						</div>
+					</li>
+					<li class="pro-product">
+						<div class="s-img">
+							<a><img src="img/gift_4.jpg"/></a>
+						</div>
+						<div class="s-info">
+							<div class="s-name">荷兰青啤梨</div>
+							<div class="s-price">￥39.00/4个</div>
+							<div class="s-car"></div>
+						</div>
+						<div class="s-promote">
+							<span>第二件9.9</span>
+						</div>
+					</li>
+					<li class="pro-product">
+						<div class="s-img">
+							<a><img src="img/gift_3.jpg"/></a>
+						</div>
+						<div class="s-info">
+							<div class="s-name">荷兰青啤梨</div>
+							<div class="s-price">￥39.00/4个</div>
+							<div class="s-car"></div>
+						</div>
+						<div class="newly s-promote">
+							<span>新品</span>
+						</div>
+					</li>
+					<li class="pro-product">
+						<div class="s-img">
+							<a><img src="img/gift_4.jpg"/></a>
+						</div>
+						<div class="s-info">
+							<div class="s-name">荷兰青啤梨</div>
+							<div class="s-price">￥39.00/4个</div>
+							<div class="s-car"></div>
+						</div>
+						<div class="s-promote">
+							<span>第二件9.9</span>
+						</div>
+					</li>
+					<li class="pro-product">
+						<div class="s-img">
+							<a><img src="img/gift_2.jpg"/></a>
+						</div>
+						<div class="s-info">
+							<div class="s-name">荷兰青啤梨</div>
+							<div class="s-price">￥39.00/4个</div>
+							<div class="s-car"></div>
+						</div>
+						<div class="s-promote">
+							<span>买两盒送两盒</span>
+						</div>
+					</li>
+					<li class="pro-product">
+						<div class="s-img">
+							<a><img src="img/gift_4.jpg"/></a>
+						</div>
+						<div class="s-info">
+							<div class="s-name">荷兰青啤梨</div>
+							<div class="s-price">￥39.00/4个</div>
+							<div class="s-car"></div>
+						</div>
+						<div class="s-promote">
+							<span>买两盒送两盒</span>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<!--购物车弹出框-->
+		<div class="cover"></div>
+		<div class="shop-cart">
+			<div class="shop-top">
+				<div class="cha"><img src="img/cha.png" class="close"/></div>
+			</div>
+			<div class="shop-content">
+				<div class="content_title clearfix">
+					<div class="success"></div>
+					<div class="adds">
+                		<p>加入购物车成功！</p>
+            		</div>
+				</div>
+				<p class="row_2">
+           			 购物车中共
+            		<em class="cartcount">23</em>
+            		件商品 | 商品小计
+            		<em class="cartprice">￥892.80</em>
+        		</p>
+				<div class="buy clearfix">
+                    <div class="fr-buy">
+                    	<a role="button" title="点击此按钮，到下一步确认购买信息" class="close">继续购物</a>
+                    </div>
+                    <div class="fr-add">
+                        <a title="加入购物车" role="button" href="myCar.html">去结算</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--点击“cha”和“继续购物时”的事件-->
+		<script type="text/javascript">
+			$(function(){
+				$(".close").click(function(){
+					
+					$(".shop-cart").css("display","none");
+					$(".cover").css("display","none");
+				})
+			})
+		</script>
+		
+		<!--footer部分-->
+		<div class="footer"></div>
+	</body>
+</html>

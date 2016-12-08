@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--plugin_css-->
+		
+		<!--auto_css-->
+		<link rel="stylesheet" href="lib/common/common.css" />
+		<link rel="stylesheet" href="css/register.css" />
+		<link rel="stylesheet" href="css/login.css" />
+		<link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css" />
+		
+		<!--plugin_js-->
+		<script type="text/javascript" src="lib/jquery/jquery-2.1.1.min.js" ></script>
+		
+		<!--auto_js-->
+		<script type="text/javascript" src="lib/common/common.js" ></script>
+		<script type="text/javascript" src="lib/js/base.js" ></script>
+		<script type="text/javascript" src="js/login.js" ></script>
+		
+		<script type="text/javascript">
+			$(function(){
+				//从公共文件夹得到每个页面的公共的头部部分
+				$(".header").load("common_head.html?" + Math.random());
+				
+				$(".submit").click(function(){
+					location.href = "register.html";
+				})
+				
+				//从公共文件夹得到每个页面的公共的尾部部分
+				$(".footer").load("common_footer.html?" + Math.random());
+			})
+		</script>
+	</head>
+	<body>
+		<!--header部分-->
+		<div class="header"></div>
+		
+		<!--logo部分-->
+		<div class="logo">
+			<a href="main.html"><img src="img/register_1.jpg"/></a>
+		</div>
+		
+		<!--登录部分-->
+		<div class="reg">
+			<h3>会员登录</h3>
+			<div class="log">
+				<form>
+					<p><span>用户名</span><input type="text" placeholder="输入用户名" name="user" id="user"/></p>
+					<p><span>密码</span><input type="text" placeholder="输入密码" name="password" id="pass"/></p>
+					<div class="forget clearfix">
+						<ul>
+							<li class="fl">
+								<input type="checkbox" class="check"/>
+								<span>记住密码</span>
+							</li>
+							<li class="fr"><a href="#">免费注册</a></li>
+							<li class="fr"><a href="#">忘记密码?</a></li>
+						</ul>
+					</div>
+					
+					<p class="btn clearfix">
+						<input type="button" value="注册会员" class="submit"/>
+						<input type="button" value="会员登录" class="login"/>
+					</p>
+				</form>
+			</div>
+		</div>
+		
+		<!--footer部分-->
+		<div class="footer"></div>
+	</body>
+</html>

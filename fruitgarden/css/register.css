@@ -1,0 +1,106 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+/*屏幕总宽度：1423*/
+.logo{
+	width: 1222px;
+	height: 103px;
+	background: url(../img/register_bg.gif) repeat-x left bottom;
+	padding: 0 100px;
+	padding-top: 24px;
+}
+
+.reg{
+	width: 1012px;
+	padding: 0 205px;
+	height: 580px;
+	padding-top: 44px;
+	background: url(../img/register_2.jpg) no-repeat 205px 150px;
+}
+.reg h3{
+	height: 60px;
+	line-height: 60px;
+	border-bottom: solid 1px #cccccc;
+	color: #999999;
+	font-size: 20px;
+	font-weight: 500;
+	margin-bottom: 40px;
+}
+.reg .write{
+	padding-left: 550px;
+	height: 408px;
+	width: 462px;
+}
+.reg .write p{
+	margin-bottom: 40px;
+	color: #999;
+	font-size: 16px;
+	font-weight: 550;
+	position: relative;
+}
+.reg .write p.rel{
+	position: relative;
+}
+input{
+	width: 330px;
+	height: 40px;
+	margin-left: 35px;
+	text-indent: 10px;
+}
+input.code{
+	width:310px ;
+}
+.fa-repeat{
+	margin-left: 4px;
+	cursor: pointer;
+}
+input.submit{
+	float: left;
+	width: 150px;
+	margin-left: 100px;
+	background: #64a131;
+	color: white;
+	font-size: 16px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+input.login{
+	float: left;
+	width: 170px;
+	margin-left: 10px;
+	border: solid 1px #64a131;
+	background: #f5ffed;
+	color: #64a131;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+}
+.vali{
+	position: absolute;
+	display: inline-block;
+	width: 80px;
+	height: 45px;
+	left: 300px;
+	top: 0;
+	font-size: 20px;
+	color: red;
+	line-height: 45px;
+	text-align: center;
+}
+.fa-times{
+	color: red;
+}
+.fa-check{
+	color: green;
+}
+label{
+	position: absolute;
+	right: 0;
+	top: 15px;
+}
+
+
+
+

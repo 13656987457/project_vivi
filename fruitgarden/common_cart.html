@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="lib/common/common_cart.css" />
+	</head>
+	<body>
+		<div class="cover"></div>
+		<div class="shop-cart">
+			<div class="shop-top">
+				<div class="cha"><img src="img/cha.png" class="close"/></div>
+			</div>
+			<div class="shop-content">
+				<div class="content_title clearfix">
+					<div class="success"></div>
+					<div class="adds">
+                		<p>加入购物车成功！</p>
+            		</div>
+				</div>
+				<p class="row_2">
+           			 购物车中共
+            		<em class="cartcount">23</em>
+            		件商品 | 商品小计
+            		<em class="cartprice">￥892.80</em>
+        		</p>
+				<div class="buy clearfix">
+                    <div class="fr-buy">
+                    	<a role="button" title="点击此按钮，到下一步确认购买信息" class="close">继续购物</a>
+                    </div>
+                    <div class="fr-add">
+                        <a title="加入购物车" role="button" href="myCar.html">去结算</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	
+	<!--点击“cha”和“继续购物时”的事件-->
+		<script type="text/javascript">
+			$(function(){
+				$(".close").click(function(){
+					
+					$(".shop-cart").css("display","none");
+					$(".cover").css("display","none");
+				})
+			})
+		</script>
+		
+</html>

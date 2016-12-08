@@ -1,0 +1,678 @@
+.fruit-content{
+	width: 1230px;
+	margin: 0 auto;
+	padding-top: 50px;
+}
+.fruit-content .bread{
+	width: 1230px;
+	height: 14px;
+	margin-bottom:20px ;
+}
+.fruit-content .bread .level_1 a{
+	font-size: 14px;
+	color: #64a131;
+	font-family: "microsoft yahei";
+}
+.fruit-content .bread .level_1 a.font{
+	font-weight: normal;
+}
+.fruit-content .bread .level_2{
+	color: #999;
+	font-size: 14px;
+	font-family: "microsoft yahei";
+}
+.fruit-content .product_focus{
+	float: left;
+	width: 680px;
+	height: 490px;
+	overflow: hidden;
+	position: relative;
+}	
+.fruit-content .product_focus .smallImg{
+	width: 142px;
+	height: 490px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.fruit-content .product_focus .smallImg li{
+	cursor: pointer;
+    width: 142px;
+    height: 123px;
+    margin-bottom: 2px;
+}
+
+
+
+.fruit-content .product_focus .smallImg li img{
+	width: 142px;
+    height: 123px;
+}
+.fruit-content .product_focus .smallImg li.last{
+	margin-bottom: 0;
+}
+
+/*当某一张照片被选中是就会给它添加这个class*/
+.cur{
+	border: solid 1px #f6af0d;
+}
+
+.fruit-content .product_focus .bigImg{
+	width: 520px;
+	height: 490px;
+	position: absolute;
+	left: 143px;
+	top: 0;
+}
+.fruit-content .product_focus .bigImg li{
+	width: 520px;
+	height: 490px;
+	cursor: pointer;
+}
+
+.fruit-content .product_focus .bigImg li img{
+	width: 520px;
+	height: 490px;
+}
+
+.fruit-content .product_info{
+	float: left;
+	width: 520px;
+	height: 490px;
+	padding: 22px 0 0 28px;
+}
+.fruit-content .product_info .country{
+	width: 520px;
+	height: 77px;
+}
+.fruit-content .product_info .country .flag{
+	float: left;
+	margin: 5px 12px 0 0;
+	width: 44px;
+	height: 30px;
+	background: url(../../img/common.png) no-repeat;
+	background-position: -449px -285px;
+}
+.fruit-content .product_info .country .name{
+	float: left;
+	width: 440px;
+	height: 77px;
+}
+.fruit-content .product_info .country .name h3{
+	height: 35px;
+	line-height: 35px;
+	font-family: 'Hiragino Sans GB','Microsoft YaHei',sans-serif;
+    color: #555555;
+    font-size: 24px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-weight: normal;
+}
+.fruit-content .product_info .country .name p{
+	height: 43px;
+    text-overflow: ellipsis;
+    font-family: 'Hiragino Sans GB','Microsoft YaHei',sans-serif;
+    overflow: hidden;
+    font-size: 16px;
+    line-height: 43px;
+    color: #999;
+}
+.fruit-content .product_info .price-info{
+	width: 520px;
+	height:283px;
+	border-bottom: solid 1px #ddd;
+}
+.fruit-content .product_info .price-info .price01{
+	width: 510px;
+	height: 65px;
+	padding-left: 10px;
+	margin-bottom: 3px;
+}
+.fruit-content .product_info .price-info .price01 .box{
+	float: left;
+}
+.fruit-content .product_info .price-info .price01 .box h5{
+	float: left;
+	padding-top: 20px;
+	font: 14px/200% 'Hiragino Sans GB','Microsoft YaHei',sans-serif;
+    color: #999999;
+    margin-right: 20px;
+}
+.fruit-content .product_info .price-info .price01 .box span{
+	float: left;
+	display: inline-block;
+	font: 24px/100% "Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    color: #64a131;
+    font-weight: bold;
+    height: 65px;
+	line-height: 65px;
+}
+.fruit-content .product_info .price-info .price01 .box1{
+	position: relative;
+	float: right;
+	width: 56px;
+	height: 26px;
+	margin-top: 20px ;
+	background: url(../../img/common.png) no-repeat -64px -8px;
+}
+.fruit-content .product_info .price-info .price01 .box1 .weixin{
+	display: none;
+	position: absolute;
+    top: -150px;
+    right: 25px;
+    z-index: 9999;
+}
+.fruit-content .product_info .price-info .size{
+	width: 510px;
+	height: 28px;
+	padding-left: 10px;
+	margin-bottom: 15px;
+}
+.fruit-content .product_info .price-info .size h5{
+	font: 14px/200% 'Hiragino Sans GB','Microsoft YaHei',sans-serif;
+    color: #999999;
+    width: 60px;
+    height: 28px;
+    float: left;
+}
+.fruit-content .product_info .price-info .size span{
+	float: left;
+	font-size: 12px;
+	text-align: center;
+	display: inline-block;
+	font-family: "microsoft yahei";
+	width: 71px;
+	height: 28px;
+	line-height: 28px;
+	color: #fff;
+	background: #64a131;
+}
+.fruit-content .product_info .price-info .sent{
+	width: 510px;
+	height: 30px;
+	padding-left: 10px;
+	margin-bottom: 13px;
+}
+.fruit-content .product_info .price-info .sent h5{
+	float: left;
+	width: 60px;
+	height: 28px;
+	font: 14px/200% 'Hiragino Sans GB','Microsoft YaHei',sans-serif;
+    color: #999999;
+}
+.fruit-content .product_info .price-info .sent .btngroup{
+	float: left;
+	width: 72px;
+	height: 30px;
+}
+.fruit-content .product_info .price-info .sent .btngroup .dropdown-toggle{
+	display: inline-block;
+    padding: 6px 12px;
+    border: 1px solid transparent;
+}
+.fruit-content .product_info .price-info .sent .btngroup .dropdown-toggle .first{
+	color: #333;
+	font-family: "microsoft yahei";
+	font-size: 14px;
+}
+.fa-angle-down{
+	color: #afafaf;
+	margin-left: 3px;
+	padding-top: 2px;
+}
+.fruit-content .product_info .price-info .sent .have{
+	float: left;
+	font-family: "Hiragino Sans GB","Microsoft YaHei",sans-serif;
+	color: #64a131;
+    width: 200px;
+    font-size: 14px;
+    padding-top: 7px;
+}
+.fruit-content .product_info .price-info .sent span{
+	float: left;
+}
+.fruit-content .product_info .price-info .number{
+	width: 510px;
+	height: 28px;
+	padding-left: 10px;
+	margin-bottom: 30px;
+}
+.fruit-content .product_info .price-info .number h5{
+	float: left;
+	width: 60px;
+	height: 28px;
+	font: 14px/200% 'Hiragino Sans GB','Microsoft YaHei',sans-serif;
+    color: #999999;
+}
+.fruit-content .product_info .price-info .number .good_buynum{
+	float: left;
+	width: 91px;
+	height: 24px;
+    border: 1px solid #dddddd;
+    border-radius: 1px;
+}
+.fruit-content .product_info .price-info .number .good_buynum span{
+	float: left;
+	width: 28px;
+    height: 22px;
+    background-color: #eeeeee;
+    color: #a6a6a6;
+    text-align: center;
+    line-height: 22px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.fruit-content .product_info .price-info .number .good_buynum #total{
+	float: left;
+	font-family: "Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    font-size: 14px;
+    width: 35px;
+    height: 22px;
+    border: 0px;
+    text-align: center;
+    line-height: 24px;
+}
+.fruit-content .product_info .price-info .buy{
+	width: 520px;
+	height: 36px;
+}
+.fruit-content .product_info .price-info .buy .btn-buy{
+	float: left;
+	width: 160px;
+	height: 36px;
+	margin: 0 10px 0 60px;
+}
+.fruit-content .product_info .price-info .buy .btn-primary{
+	color: #7daf57;
+    background: #f5ffed;
+    border: 1px solid #64a131;
+    display: block;
+    width: 160px;
+    height: 36px;
+    font-family: "Hiragino Sans GB","microsoft yahei",sans-serif;
+    font-size: 16px;
+    text-align: center;
+    line-height: 36px;
+    border-radius: 4px;
+    font-weight: normal;
+    cursor: pointer;
+}
+.fruit-content .product_info .price-info .buy .btn-add .btn-primary{
+	background: #7DAF57;
+	color: white;
+}
+.fruit-content .product_info .price-info .buy .btn-add{
+	float: left;
+	width: 160px;
+	height: 36px;
+}
+.fruit-content .product_info .comment{
+	width: 520px;
+	height: 90px;
+	margin-top: 16px;
+}
+.fruit-content .product_info .comment div{
+	width: 260px;
+	height:20px ;
+	margin-bottom: 10px;
+}
+.fruit-content .product_info .comment div h5{
+	margin-right: 0px;
+	font-size: 14px;
+	height: 20px;
+    line-height: 20px;
+    margin-right: 20px;
+    color: #999;
+    font-family: "Hiragino Sans GB","Microsoft YaHei",sans-serif;
+}
+.fruit-content .product_info .comment div span{
+	width: 70%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #555;
+    font-size: 14px;
+    font-family: "Hiragino Sans GB","Microsoft YaHei",sans-serif;
+}
+.fruit-content .product_info .comment .pull-left{
+	float: left;
+	font-weight: normal;
+}
+
+.fruit-content .assess{
+	width: 1230px;
+}
+.fruit-content .assess .main-assess{
+	width: 1228px;
+	border: solid 1px #ccc ;
+}
+.fruit-content .assess .main-assess #js-fixed{
+	width: 1228px;
+	height: 38px;
+	background-color: #f1f1f1;
+	z-index: 999;
+}
+.fruit-content .assess .main-assess #js-fixed span{
+	float: left;
+	height: 39px;
+	cursor: pointer;
+    border-right: 1px solid #ccc;
+    margin-top: -1px;
+    padding: 0 36px;
+	text-align: center;
+    line-height: 39px;
+    font: 16px/200% 'Hiragino Sans GB','Microsoft YaHei',sans-serif;
+    color: #555555;
+}
+.fruit-content .assess .main-assess #js-fixed .pull-left_1{
+	width: 120px;
+	
+}
+.fruit-content .assess .main-assess #js-fixed .pull-left_2{
+	width: 170px;
+}
+.fruit-content .assess .main-assess #js-fixed span.cur_1{
+	height: 36px;
+    border-top: 3px solid #64a131;
+    background-color: #ffffff; 
+}
+/*点击对应的父元素才会拥有这个class*/
+.comment_total_top{
+	color: #64a131;
+}
+.fruit-content .assess .main-assess #js-fixed .pull-right{
+	float: right;
+	padding: 2px 22px;
+    display: block;
+    position: relative;
+    width: 172px;
+    height: 35px;
+    font-family: "Hiragino Sans GB","microsoft yahei",sans-serif;
+    font-size: 16px;
+    text-align: center;
+    line-height: 35px;
+    color: white;
+    font-weight: normal;
+    background: #64a131;
+    cursor: pointer;
+}
+
+.fruit-content .assess .main-assess .good-comments{
+	width: 1228px;
+}
+
+.fruit-content .assess .main-assess .good-comments ul{
+	width: 1228px;
+}
+
+.fruit-content .assess .main-assess .good-comments ul .app-detail{
+	width: 1228px;
+}
+.fruit-content .assess .main-assess .good-comments ul .app-detail .app-detail-top{
+	width: 1226px;
+	height: 155px;
+	border: 1px solid #d8d8d8;
+}
+.fruit-content .assess .main-assess .good-comments ul .app-detail img{
+	width: 1228px;
+	display: block;
+}
+.good-comments ul .app-detail .app-detail-top dl{
+	width: 1226px;
+	height: 38px;
+	border-bottom: solid 1px #d8d8d8;
+	color: #333;
+	font-size: 14px;
+	font-family: Calibri,Arial,Helvetica,sans-serif;
+}
+.good-comments ul .app-detail .app-detail-top dl:nth-child(odd){
+	background: #f7f7f7;
+}
+.good-comments ul .app-detail .app-detail-top dl dt{
+	width: 120px;
+	text-align: left;
+	padding: 9px 12px;
+	font-weight: bold;
+	float: left;
+}
+.good-comments ul .app-detail .app-detail-top dl dd{
+	width: 1000px;
+	border-left: solid 1px #d8d8d8;
+	padding: 9px 12px;
+	float: left;
+}
+
+.fruit-content .assess .main-assess .good-comments .no-1{
+	
+}
+.fruit-content .assess .main-assess .good-comments .no-2{
+	width: 1228px;
+	height: 1835px;
+	display: none;
+}
+.fruit-content .assess .main-assess .good-comments .no-2 .detail-title{
+	width: 1228px;
+	height: 101px;
+	padding: 46px 0 50px 0;
+}
+.fruit-content .assess .main-assess .good-comments .no-2 .detail-title .pull-left{
+	float: left;
+}
+.fruit-content .assess .main-assess .good-comments .no-2 .detail-title .title_1{
+	width: 198px;
+    height: 58px;
+    padding: 21px 20px;
+    text-align: center;
+    border-right: 1px solid #ccc;
+}
+.fruit-content .assess .main-assess .good-comments .no-2 .detail-title .title_1 h3{
+	font: 40px/100% 'Hiragino Sans GB W6','Microsoft YaHei';
+    color: #f6ab00;
+}
+.fruit-content .assess .main-assess .good-comments .no-2 .detail-title .title_1 p{
+	font: 14px/100% 'Hiragino Sans GB W6','Microsoft YaHei';
+    color: #333;
+    margin-top: 8px;
+    text-align: center;
+}
+
+.fruit-content .assess .main-assess .good-comments .no-2 .detail-title .title_2{
+	width: 355px;
+	height: 90px;
+    padding: 11px 70px;
+    padding-bottom: 0px;
+    border-right: 1px solid #ccc;
+}
+.fruit-content .assess .main-assess .good-comments .no-2 .detail-title .title_2 .pl-user{
+	width: 330px;
+	height: 14px;
+	margin-bottom: 16px;
+	font: 14px/100% 'Hiragino Sans GB','Microsoft YaHei',sans-serif;
+}
+.fruit-content .assess .main-assess .good-comments .no-2 .detail-title .title_2 .pl-user .dengji-good{
+	width: 200px;
+	height: 14px;
+	margin: 0 10px;
+	border-radius: 10px;
+    background-color: #dddddd;
+}
+.main-assess .good-comments .no-2 .detail-title .title_2 .pl-user .dengji-good div{
+	border-radius: 10px;
+    background-color: #f6ab00;
+    height: 14px;
+}
+
+.fruit-content .assess .main-assess .good-comments .no-2 .detail-title .title_3{
+	width: 450px;
+	height: 56px;
+    padding-top: 20px;
+    padding-left: 38px;
+    text-align: center;
+    color: #333;
+    font: 14px/200% 'Hiragino Sans GB W6','Microsoft YaHei',sans-serif;
+}
+
+/*用户评论正式开始!!!!!*/
+.fruit-content .assess .main-assess .good-comments .no-2 .user-comment{
+	width:1228px;
+}
+.fruit-content .assess .main-assess .good-comments .no-2 .user-comment .detail-user-title{
+	width: 1190px;
+	height: 36px;
+	padding-left: 38px;
+    line-height: 36px;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-right: none;
+    background-color: #eeeeee;
+}
+.fruit-content .assess .main-assess .good-comments .no-2 .user-comment .pull-left{
+	float: left;
+}
+.fruit-content .assess .main-assess .good-comments .no-2 .user-comment  .detail-user-title li{
+	margin-right: 40px;
+	cursor: pointer;
+    font-size: 14px;
+    font-family: 'Hiragino Sans GB','Microsoft YaHei',sans-serif;
+    color: #555555;
+}
+.fruit-content .assess .main-assess .good-comments .no-2 .user-comment  .detail-user-title li.now-orange i{
+	background: url(../../img/common.png) no-repeat -532px -151px;
+}
+.fruit-content .assess .main-assess .good-comments .no-2 .user-comment  .detail-user-title li i{
+	display: inline-block;
+    width: 14px;
+    height: 16px;
+    padding-right: 5px;
+    margin-top: 10px;
+    background: url(../../img/common.png) no-repeat -532px -170px;
+}
+.fruit-content .assess .main-assess .good-comments .no-2 .user-comment .detail-allsay{
+	width: 1228px;
+	height: 1558px;
+}
+.fruit-content .assess .main-assess .good-comments .no-2 .user-comment .detail-allsay .detail-allsaya_01{
+	width: 1228px;
+	height: 1558px;
+}
+.main-assess .good-comments .no-2 .user-comment .detail-allsay .detail-allsaya_01 .detail-user-says{
+	height: 134px;
+	width: 1050px;
+	padding-top: 15px;
+    border-bottom: 1px solid #ccc;
+    background: url(../../img/user_img.png) no-repeat 30px 15px;
+    position: relative;
+    font-family: 'Hiragino Sans GB','Microsoft YaHei';
+    color: #333;
+    font-size: 14px;
+    padding-left: 178px;
+}
+.main-assess .good-comments .no-2 .user-comment .detail-allsay .detail-allsaya_01 .detail-user-says .grade{
+	margin: 20px 0 20px 20px;
+}
+.main-assess .good-comments .no-2 .user-comment .detail-allsay .detail-allsaya_01 .detail-user-says .content{
+	margin: 20px 0 20px 20px;
+}
+.main-assess .good-comments .no-2 .user-comment .detail-allsay .detail-allsaya_01 .detail-user-says .date{
+	margin: 20px 0 20px 78px;
+	font-size: 12px;
+}
+
+.main-assess .good-comments .no-2 .user-comment .detail-allsay .detail-allsaya_01 .detail-user-says .grade .star{
+	display: inline-block;
+	width: 16px;
+	height: 15px;
+	background: url(../../img/common.png) no-repeat -7px -167px;
+}
+
+.main-assess .good-comments .no-2 .user-comment .detail-allsay .detail-allsaya_01 .detail-user-says .tel{
+	position: absolute;
+	left: 30px;
+	top: 115px;
+}
+
+
+.fruit-content .assess .main-assess .good-comments .no-2 .user-comment .btn-toolbar{
+	width: 1228px;
+	height: 41px;
+}
+.fruit-content .assess .main-assess .good-comments .no-2 .user-comment .btn-toolbar .comment-box-page{
+	width: 428px;
+	height: 29px;
+	padding: 6px 400px;
+	text-align: center;
+	background: #f1f1f1;
+} 
+.btn-toolbar .comment-box-page a{
+	color: #555;
+    cursor: pointer;
+    font-family: "Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    font-size: 14px;
+    float: left;
+    font-weight: lighter;
+    height: 20px;
+    line-height: 30px;
+}
+.btn-toolbar .comment-box-page a:hover{
+	text-decoration: underline;
+	color: #64a131;
+}
+.btn-toolbar .comment-box-page .prev{
+	width: 65px;
+    margin-left: 10px;
+    float: left;
+}
+.btn-toolbar .comment-box-page .prev a{  
+	display: block;
+    width: 65px;
+    height: 20px;
+    line-height: 20px;
+    margin-top: 5px;
+}
+.btn-toolbar .comment-box-page .next{
+	width: 65px;
+    margin-right: 10px;
+    display: inline-block;
+    float: left;
+}
+.btn-toolbar .comment-box-page .next a{
+	display: block;
+    width: 65px;
+    height: 20px;
+    line-height: 20px;
+    margin-top: 5px;
+}
+.btn-toolbar .comment-box-page .pageNum{
+	float: left;
+	width: 120px;
+	height: 26px;
+	margin-top: 3px;
+	margin-left: 18px;
+}
+.btn-toolbar .comment-box-page .pageNum span{
+	display: inline-block;
+    height: 26px;
+    margin-right: 14px;
+    font-size: 14px;
+    font-family: 'Hiragino Sans GB','Microsoft YaHei',sans-serif;
+    line-height: 26px;
+    text-align: center;
+    color: #555555;
+    cursor: pointer;
+}
+.btn-toolbar .comment-box-page .pageNum span.cur_2{
+	width: 20px;
+    border-radius: 13px;
+    padding-left: 3px;
+    padding-right: 3px;
+    color: #ffffff;
+    background: #64a131;
+}
+.fa-shopping-cart{
+	color: white;
+	height: 35px;
+	line-height: 35px;
+	float: left;
+	margin-left: 30px;
+}
+

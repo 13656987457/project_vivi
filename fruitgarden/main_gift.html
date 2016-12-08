@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--plugin_css-->
+		
+		<!--auto_css-->
+		<link rel="stylesheet" href="lib/common/common.css" />
+		<link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css" />
+		
+		<!--plugin_js-->
+		<script type="text/javascript" src="lib/jquery/jquery-2.1.1.min.js" ></script>
+		
+		<!--auto_js-->
+		<script type="text/javascript" src="lib/common/common.js" ></script>
+		<script type="text/javascript" src="lib/js/base.js" ></script>
+		
+		<script type="text/javascript">
+			$(function(){
+				
+				//从公共文件夹得到每个页面的公共的头部部分
+				$(".header").load("common_head.html?" + Math.random());
+				
+				//从公共文件夹得到每个页面的公共的logo部分
+				$(".logo").load("main_common.html?" + Math.random(),function(){
+					$(".yy-clarify ul li").removeClass("on");
+					$(".yy-clarify ul li a").removeClass("txt");
+					$(".yy-clarify ul .gift").addClass("on");
+					$(".yy-clarify ul .gift a").addClass("txt");
+				});
+				
+				//从公共文件夹得到每个页面的公共的尾部部分
+				$(".footer").load("common_footer.html?" + Math.random());
+			})
+		</script>
+	</head>
+	<body>
+		<!--header部分-->
+		<div class="header"></div>
+		
+		<!--logo部分-->
+		<div class="logo"></div>
+		
+		<!--footer部分-->
+		<div class="footer"></div>
+	</body>
+</html>

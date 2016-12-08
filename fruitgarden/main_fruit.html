@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--plugin_css-->
+		
+		<!--auto_css-->
+		<link rel="stylesheet" href="lib/page_css/main_fruit.css" />
+		<link rel="stylesheet" href="lib/common/common.css" />
+		<link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css" />
+		
+		<!--plugin_js-->
+		<script type="text/javascript" src="lib/jquery/jquery-2.1.1.min.js" ></script>
+		
+		<!--auto_js-->
+		<script type="text/javascript" src="js/register.js" ></script>
+		<script type="text/javascript" src="lib/page_js/main_fruit.js" ></script>
+		<script type="text/javascript" src="lib/common/common.js" ></script>
+		<script type="text/javascript" src="lib/js/base.js" ></script>
+		
+		<script type="text/javascript">
+			$(function(){
+				
+				//从公共文件夹得到每个页面的公共的头部部分
+				$(".header").load("common_head.html?" + Math.random());
+				
+				//从公共文件夹得到每个页面的公共的logo部分
+				$(".logo").load("main_common.html?" + Math.random(),function(){
+					$(".yy-clarify ul li").removeClass("on");
+					$(".yy-clarify ul li a").removeClass("txt");
+					$(".yy-clarify ul .fruit").addClass("on");
+					$(".yy-clarify ul .fruit a").addClass("txt");
+				});
+				
+				//从公共文件夹得到每个页面的公共的购物车弹出部分
+				$(".dialogue").load("common_cart.html?"+ Math.random(),function(){
+					console.log(1212);
+				});
+				
+				//从公共文件夹得到每个页面的公共的尾部部分
+				$(".footer").load("common_footer.html?" + Math.random());
+			})
+		</script>
+	</head>
+	<body>
+		<!--header部分-->
+		<div class="header"></div>
+		
+		<!--logo部分-->
+		<div class="logo"></div>
+		
+		<!--主要内容部分-->
+		<div class="content">
+			
+			<!--筛选器-->
+			<div class="selector">
+				
+				<div class="oc clearfix">
+					<h5 class="pull-left">品类</h5>
+					<div class="y-select clearfix">
+						<div class="all"><a>全部</a></div>
+						<div class="rightpart">
+							<a><span class="line">水果礼盒</span></a>
+                			<a><span class="line">水果礼盒</span></a>
+                			<a><span class="line">水果礼盒</span></a>
+                			<a><span class="line">水果礼盒</span></a>
+                			<a><span class="line">水果礼盒</span></a>
+                			<a><span class="line">水果礼盒</span></a>
+                			<a><span class="line">水果礼盒</span></a>
+                			<a><span class="line">水果礼盒</span></a>
+                			<a><span class="line">水果礼盒</span></a>
+                			<a><span class="line">水果礼盒</span></a>
+                			<a><span class="line">水果礼盒</span></a>
+                			<a><span class="line">水果礼盒</span></a>
+                			<a><span class="line">水果礼盒</span></a>
+                			<a><span class="line">水果礼盒</span></a>
+                			<a><span class="line">水果礼盒</span></a>
+                			<a><span class="line">水果礼盒</span></a>
+                			<a><span class="line">水果礼盒</span></a>
+                			<a><span class="line">水果礼盒</span></a>
+                			<a><span class="line">水果礼盒</span></a>
+                			<a><span class="line">水果礼盒</span></a>
+                			<a><span class="line">水果礼盒</span></a>
+                			<a><span class="line">水果礼盒</span></a>
+                			<a><span class="line">水果礼盒</span></a>
+                			<a><span class="line">水果礼盒</span></a>
+						</div>
+					</div>
+				</div>
+				
+				<div class="oc clearfix">
+					<h5 class="pull-left">产地</h5>
+					<div class="y-select clearfix">
+						<div class="all"><a>全部</a></div>
+						<div class="rightpart">
+							<a><span class="line">水果礼盒</span></a>
+                			<a><span class="line">水果礼盒</span></a>
+                			<a><span class="line">水果礼盒</span></a>
+                			<a><span class="line">水果礼盒</span></a>
+                			<a><span class="line">水果礼盒</span></a>
+                			<a><span class="line">水果礼盒</span></a>
+                			<a><span class="line">水果礼盒</span></a>
+                			<a><span class="line">水果礼盒</span></a>
+                			<a><span class="line">水果礼盒</span></a>
+                			<a><span class="line">水果礼盒</span></a>
+                			<a><span class="line">水果礼盒</span></a>
+                			<a><span class="line">水果礼盒</span></a>
+                			<a><span class="line">水果礼盒</span></a>
+						</div>
+					</div>
+				</div>
+				
+				<div class="oc clearfix">
+					<h5 class="pull-left">规格</h5>
+					<div class="y-select clearfix">
+						<div class="all"><a>全部</a></div>
+						<div class="rightpart">
+							<a><span class="line">水果礼盒</span></a>
+                			<a><span class="line">水果礼盒</span></a>
+                			<a><span class="line">水果礼盒</span></a>
+                			<a><span class="line">水果礼盒</span></a>
+                			<a><span class="line">水果礼盒</span></a>
+                			<a><span class="line">水果礼盒</span></a>
+                			<a><span class="line">水果礼盒</span></a>
+						</div>
+					</div>
+				</div>
+				
+				<div class="oc clearfix">
+					<h5 class="pull-left">排序</h5>
+					<div class="y-select clearfix">
+						<div class="all"><a>默认</a></div>
+						<div class="rightpart last">
+							<a><span class="line">价格从低到高</span></a>
+                			<a><span class="line">价格从高到低</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!--各种水果列表页-->
+			<div class="y-list">
+				<ul>
+					<li>
+						<div class="s-img">
+							<a><img src="img/img_1.jpg"/></a>
+						</div>
+						<div class="s-info clearfix">
+                            <span>￥148.00</span>
+                         	智利甜心樱桃 J
+                        </div>
+						<div class="s-operate clearfix">
+                             <div class="s-kg">
+                             	<span>两斤</span>
+                             </div> 
+                             <div class="s-car"></div>
+                        </div>
+					</li>
+					<li>
+						<div class="s-img">
+							<a><img src="img/img_1.jpg"/></a>
+						</div>
+						<div class="s-info clearfix">
+                            <span>￥148.00</span>
+                         	智利甜心樱桃 J
+                        </div>
+						<div class="s-operate clearfix">
+                             <div class="s-kg">
+                             	<span>两斤</span>
+                             </div> 
+                             <div class="s-car"></div>
+                        </div>
+					</li>
+					<li>
+						<div class="s-img">
+							<a><img src="img/img_1.jpg"/></a>
+						</div>
+						<div class="s-info clearfix">
+                            <span>￥148.00</span>
+                         	智利甜心樱桃 J
+                        </div>
+						<div class="s-operate clearfix">
+                             <div class="s-kg">
+                             	<span>两斤</span>
+                             </div> 
+                             <div class="s-car"></div>
+                        </div>
+					</li>
+					<li>
+						<div class="s-img">
+							<a><img src="img/img_1.jpg"/></a>
+						</div>
+						<div class="s-info clearfix">
+                            <span>￥148.00</span>
+                         	智利甜心樱桃 J
+                        </div>
+						<div class="s-operate clearfix">
+                             <div class="s-kg">
+                             	<span>两斤</span>
+                             </div> 
+                             <div class="s-car"></div>
+                        </div>
+					</li>
+					<li>
+						<div class="s-img">
+							<a><img src="img/img_1.jpg"/></a>
+						</div>
+						<div class="s-info clearfix">
+                            <span>￥148.00</span>
+                         	智利甜心樱桃 J
+                        </div>
+						<div class="s-operate clearfix">
+                             <div class="s-kg">
+                             	<span>两斤</span>
+                             </div> 
+                             <div class="s-car"></div>
+                        </div>
+					</li>
+					<li>
+						<div class="s-img">
+							<a><img src="img/img_2.jpg"/></a>
+						</div>
+						<div class="s-info clearfix">
+                            <span>￥148.00</span>
+                         	智利甜心樱桃 J
+                        </div>
+						<div class="s-operate clearfix">
+                             <div class="s-kg">
+                             	<span>两斤</span>
+                             </div> 
+                             <div class="s-car"></div>
+                        </div>
+					</li>
+					<li>
+						<div class="s-img">
+							<a><img src="img/img_2.jpg"/></a>
+						</div>
+						<div class="s-info clearfix">
+                            <span>￥148.00</span>
+                         	智利甜心樱桃 J
+                        </div>
+						<div class="s-operate clearfix">
+                             <div class="s-kg">
+                             	<span>两斤</span>
+                             </div> 
+                             <div class="s-car"></div>
+                        </div>
+					</li>
+					<li>
+						<div class="s-img">
+							<a><img src="img/img_2.jpg"/></a>
+						</div>
+						<div class="s-info clearfix">
+                            <span>￥148.00</span>
+                         	智利甜心樱桃 J
+                        </div>
+						<div class="s-operate clearfix">
+                             <div class="s-kg">
+                             	<span>两斤</span>
+                             </div> 
+                             <div class="s-car"></div>
+                        </div>
+					</li>
+					<li>
+						<div class="s-img">
+							<a><img src="img/img_2.jpg"/></a>
+						</div>
+						<div class="s-info clearfix">
+                            <span>￥148.00</span>
+                         	智利甜心樱桃 J
+                        </div>
+						<div class="s-operate clearfix">
+                             <div class="s-kg">
+                             	<span>两斤</span>
+                             </div> 
+                             <div class="s-car"></div>
+                        </div>
+					</li>
+					<li>
+						<div class="s-img">
+							<a><img src="img/img_2.jpg"/></a>
+						</div>
+						<div class="s-info clearfix">
+                            <span>￥148.00</span>
+                         	智利甜心樱桃 J
+                        </div>
+						<div class="s-operate clearfix">
+                             <div class="s-kg">
+                             	<span>两斤</span>
+                             </div> 
+                             <div class="s-car"></div>
+                        </div>
+					</li>
+					<li>
+						<div class="s-img">
+							<a><img src="img/img_3.jpg"/></a>
+						</div>
+						<div class="s-info clearfix">
+                            <span>￥148.00</span>
+                         	智利甜心樱桃 J
+                        </div>
+						<div class="s-operate clearfix">
+                             <div class="s-kg">
+                             	<span>两斤</span>
+                             </div> 
+                             <div class="s-car"></div>
+                        </div>
+					</li>
+					<li>
+						<div class="s-img">
+							<a><img src="img/img_3.jpg"/></a>
+						</div>
+						<div class="s-info clearfix">
+                            <span>￥148.00</span>
+                         	智利甜心樱桃 J
+                        </div>
+						<div class="s-operate clearfix">
+                             <div class="s-kg">
+                             	<span>两斤</span>
+                             </div> 
+                             <div class="s-car"></div>
+                        </div>
+					</li>
+					<li>
+						<div class="s-img">
+							<a><img src="img/img_3.jpg"/></a>
+						</div>
+						<div class="s-info clearfix">
+                            <span>￥148.00</span>
+                         	智利甜心樱桃 J
+                        </div>
+						<div class="s-operate clearfix">
+                             <div class="s-kg">
+                             	<span>两斤</span>
+                             </div> 
+                             <div class="s-car"></div>
+                        </div>
+					</li>
+					<li>
+						<div class="s-img">
+							<a><img src="img/img_3.jpg"/></a>
+						</div>
+						<div class="s-info clearfix">
+                            <span>￥148.00</span>
+                         	智利甜心樱桃 J
+                        </div>
+						<div class="s-operate clearfix">
+                             <div class="s-kg">
+                             	<span>两斤</span>
+                             </div> 
+                             <div class="s-car"></div>
+                        </div>
+					</li>
+					<li>
+						<div class="s-img">
+							<a><img src="img/img_3.jpg"/></a>
+						</div>
+						<div class="s-info clearfix">
+                            <span>￥148.00</span>
+                         	智利甜心樱桃 J
+                        </div>
+						<div class="s-operate clearfix">
+                             <div class="s-kg">
+                             	<span>两斤</span>
+                             </div> 
+                             <div class="s-car"></div>
+                        </div>
+					</li>
+					<li>
+						<div class="s-img">
+							<a><img src="img/img_4.jpg"/></a>
+						</div>
+						<div class="s-info clearfix">
+                            <span>￥148.00</span>
+                         	智利甜心樱桃 J
+                        </div>
+						<div class="s-operate clearfix">
+                             <div class="s-kg">
+                             	<span>两斤</span>
+                             </div> 
+                             <div class="s-car"></div>
+                        </div>
+					</li>
+					<li>
+						<div class="s-img">
+							<a><img src="img/img_4.jpg"/></a>
+						</div>
+						<div class="s-info clearfix">
+                            <span>￥148.00</span>
+                         	智利甜心樱桃 J
+                        </div>
+						<div class="s-operate clearfix">
+                             <div class="s-kg">
+                             	<span>两斤</span>
+                             </div> 
+                             <div class="s-car"></div>
+                        </div>
+					</li>
+					<li>
+						<div class="s-img">
+							<a><img src="img/img_4.jpg"/></a>
+						</div>
+						<div class="s-info clearfix">
+                            <span>￥148.00</span>
+                         	智利甜心樱桃 J
+                        </div>
+						<div class="s-operate clearfix">
+                             <div class="s-kg">
+                             	<span>两斤</span>
+                             </div> 
+                             <div class="s-car"></div>
+                        </div>
+					</li>
+					<li>
+						<div class="s-img">
+							<a><img src="img/img_4.jpg"/></a>
+						</div>
+						<div class="s-info clearfix">
+                            <span>￥148.00</span>
+                         	智利甜心樱桃 J
+                        </div>
+						<div class="s-operate clearfix">
+                             <div class="s-kg">
+                             	<span>两斤</span>
+                             </div> 
+                             <div class="s-car"></div>
+                        </div>
+					</li>
+					<li>
+						<div class="s-img">
+							<a><img src="img/img_4.jpg"/></a>
+						</div>
+						<div class="s-info clearfix">
+                            <span>￥148.00</span>
+                         	智利甜心樱桃 J
+                        </div>
+						<div class="s-operate clearfix">
+                             <div class="s-kg">
+                             	<span>两斤</span>
+                             </div> 
+                             <div class="s-car"></div>
+                        </div>
+					</li>
+				</ul>
+			</div>
+			
+			<!--获取所有s-img中的a标签，给它添加一个链接到商品详情中去-->
+			<script type="text/javascript">
+				$(function(){
+					$.each($(".s-img a"), function() {
+						$(this)[0].href = "gooddetails.html";
+					});
+				})
+			</script>
+			
+		</div>
+		
+		<!--购物车弹出框-->
+		<div class="dialogue"></div>
+		
+		<!--footer部分-->
+		<div class="footer"></div>
+	</body>
+</html>

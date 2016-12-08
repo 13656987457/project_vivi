@@ -1,0 +1,144 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+ul,li{
+	list-style: none;
+}
+.logo{
+	height: 80px;
+	padding: 20px 0px;
+	margin: 0 100px;
+	background: url(../../img/register_bg.gif) repeat-x left bottom;
+}
+.start-logo{
+	
+}
+.start-logo img{
+	padding: 8px 0;
+}
+.start-logo .yy-clarify{
+	margin-left: 80px;
+}
+.start-logo .yy-clarify ul{
+	
+}
+.start-logo .yy-clarify ul li{
+	float: left;
+	height: 90px;
+	width: 90px;
+	/*border-bottom: solid 2px #64a131;*/
+	margin-right: 3px;
+	background: url(../../img/clarify_bg1.gif) no-repeat right center;
+}
+.start-logo .yy-clarify ul li.last{
+	width: 101px;
+	background: none;
+}
+
+.start-logo .yy-clarify ul li a{
+	margin: 20px 0;
+	padding: 0 20px;
+	display: block;
+	height: 40px;
+	line-height: 20px;
+	color: #999;
+	font-size: 15px;
+	font-weight: normal;
+	text-align: center;
+	cursor: pointer;
+	
+}
+.start-logo .yy-clarify ul li a:hover{
+	background: #eeeeee;
+}
+.start-logo .yy-clarify ul li a span{
+	display: block;
+	
+}
+.on{
+    border-bottom:2px solid #64a131;
+}
+.start-logo .yy-clarify ul li .txt{
+	color: #64a131;
+}
+
+.start-logo .yy-search{
+	width: 237px;
+	height: 70px;
+}
+.start-logo .yy-search .top-search{
+	width: 180px;
+	height: 50px;
+	margin-top: 20px;
+}
+.start-logo .yy-search .top-search .top{
+	border-bottom: solid 1px #999999;
+	height: 27px;
+}
+.start-logo .yy-search .top-search .top .keyword{
+	width: 138px;
+	height: 17px;
+	padding: 5px 3px;
+	border: none;
+	background: none;
+	font-family: "microsoft yahei";
+	outline: none;
+}
+.start-logo .yy-search .top-search .top .fa-search{
+	width: 20px;
+	height: 28px;
+	padding: 5px 6px;
+	border: none;
+	background: none;
+	color: #64a131;
+	cursor: pointer;
+}
+.start-logo .yy-search .top-search .bottom{
+	height: 22px;
+	width: 176px;
+}
+.start-logo .yy-search .top-search .bottom a{
+	color: #999;
+	font-family:  "microsoft yahei";
+	font-weight: normal;
+	
+}
+.start-logo .yy-search .common-car{
+	width: 42px;
+	height: 42px;
+	margin: 20px 0 0 15px;
+	position: relative;
+}
+.start-logo .yy-search .common-car .carImage{
+	width: 42px;
+	height: 42px;
+	background: url(../../img/buyCar.jpg) no-repeat;
+}
+.start-logo .yy-search .common-car .carImage_orange{
+	width: 42px;
+	height: 42px;
+	background: url(../../img/buyCar_orange.jpg) no-repeat;
+}
+.start-logo .yy-search .common-car .carnone{
+	background: white;
+	height: 15px;
+	width: 295px;
+	padding: 15px 0 15px 15px;
+	display: none;
+	position: absolute;
+	top: 58px;
+	right: -10px;
+	box-shadow: 0 0 45px rgba(175,175,175,0.75);
+	z-index: 999;
+}
+.start-logo .yy-search .common-car .carnone h5{
+	color: #999;
+	text-align: center;
+	font-size: 14px;
+	font-weight: 500;
+	font-family:"microsoft yahei";
+}
+
+
+

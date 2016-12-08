@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--plugin_css-->
+		
+		<!--auto_css-->
+		<link rel="stylesheet" href="lib/page_css/gooddetails.css" />
+		<link rel="stylesheet" href="lib/common/common.css" />
+		<link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css" />
+		
+		<!--plugin_js-->
+		<script type="text/javascript" src="lib/jquery/jquery-2.1.1.min.js" ></script>
+		
+		<!--auto_js-->
+		<script type="text/javascript" src="js/register.js" ></script>
+		<script type="text/javascript" src="lib/page_js/gooddetail.js"></script>
+		<script type="text/javascript" src="lib/js/new_move.js" ></script>
+		<script type="text/javascript" src="lib/common/common.js" ></script>
+		<script type="text/javascript" src="lib/js/base.js" ></script>
+		
+		<script type="text/javascript">
+			$(function(){
+				
+				//从公共文件夹得到每个页面的公共的头部部分
+				$(".header").load("common_head.html?" + Math.random());
+				
+				//从公共文件夹得到每个页面的公共的logo部分
+				$(".logo").load("main_common.html?" + Math.random(),function(){
+					$(".yy-clarify ul li").removeClass("on");
+				});
+				
+				//从公共文件夹得到每个页面的公共的购物车弹出部分
+				$(".dialogue").load("common_cart.html?"+ Math.random(),function(){
+					console.log(1212);
+				});
+				
+				
+				//从公共文件夹得到每个页面的公共的尾部部分
+				$(".footer").load("common_footer.html?" + Math.random());
+				
+			})
+		</script>
+	</head>
+	<body>
+		<!--header部分-->
+		<div class="header"></div>
+		
+		<!--logo部分-->
+		<div class="logo"></div>
+		
+		<!--水果信息开始-->
+		<div class="fruit-content">
+			<div class="bread">
+
+				<strong class="level_1"><a href="/">首页</a></strong>
+				<span class="level_1">
+                                &gt;
+                	<a class="font">新鲜水果</a>
+                                &gt;
+            	</span>
+            	<span class="level_2">智利甜心樱桃 J</span>
+			</div>
+			
+			<!--焦点图和产品信息开始！-->
+			<div class="clearfix">
+				
+				<!--焦点开始-->
+				<div class="product_focus">
+					<ul class="smallImg">
+						<li><img src="img/small_1.jpg"/></li>
+						<li><img src="img/small_2.jpg"/></li>
+						<li><img src="img/small_3.jpg"/></li>
+						<li class="last"><img src="img/small_4.jpg"/></li>
+					</ul>
+					<ul class="bigImg">
+						<li><img src="img/big_1.jpg"/></li>
+						<li><img src="img/big_2.jpg"/></li>
+						<li><img src="img/big_3.jpg"/></li>
+						<li><img src="img/big_4.jpg"/></li>
+					</ul>
+				</div>
+				
+				<!--产品信息-->
+				<div class="product_info">
+					<div class="country clearfix">
+						<div class="flag"></div>
+						<div class="name">
+							<h3>智利甜心樱桃 J</h3>
+							<p>果径26-28mm 冷链护送 鲜货直达  </p>
+						</div>
+					</div>
+					<div class="price-info">
+						<div class="price01 clearfix">
+							<div class="box clearfix">
+								<h5>果园价</h5>
+								<span>￥128.00</span>
+							</div>
+							<div class="box1">
+								<div class="weixin"><img src="img/box_weixin.png"/></div>
+								
+								<!--鼠标移到微信扫码上会“变大”这个条形码-->
+								<script type="text/javascript">
+			                        $(document).ready(
+			                            function(e){
+			                                $(".box1").mouseover(
+			                                    function(e){
+			                                    /* Act on the event */
+			                                    $(".weixin").show();
+			                                });
+			                                 $(".box1").mouseleave(
+			                                    function(e){
+			                                     /* Act on the event */
+			                                     $(".weixin").hide();
+			                                 });
+			                            });
+								</script>
+							
+							</div>
+						</div>
+						<div class="size clearfix">
+							<h5>规格</h5>
+							<span>2斤</span>
+						</div>
+						<div class="sent clearfix">
+							<h5>配送至</h5>
+							<div class="btngroup">
+								<div class="dropdown-toggle">
+									<span class="first">广州</span>
+									<span class="fa fa-angle-down"></span>
+								</div>
+							</div>
+							<span class="have">有货</span>
+						</div>
+						<div class="number clearfix">
+							<h5>数量</h5>
+							<div class="good_buynum clearfix">
+								<span id="reduce">-</span>
+								<input type="tel" id="total" value="1"/>
+								<span id="add">+</span>
+							</div>
+							
+							<!--点击“+”和“-”会自动使得total的数字增大或是减小-->
+							<script type="text/javascript">
+								
+							</script>
+							
+						</div>
+						<div class="buy clearfix">
+							<div class="btn-buy">
+								<a title="点击此按钮，到下一步确认购买信息" class="btn-primary" href="myCar.html">立即购买</a>
+							</div>
+							<div class="btn-add">
+								<a title="加入购物车" class="btn-primary add_car">加入购物车 </a>
+							</div>
+						</div>
+					</div>
+					
+						<!--点击立即购买：会将此商品加入到购物车中，并跳到我的购物车界面-->
+						<!--点击加入购物车：将此商品加入到购物车中去，并弹出对话框-->
+						<!--<script type="text/javascript">
+							$(function(){
+								
+								//先得到商品名称、商品价格、商品规格
+								$(".btn-primary").click(function(){
+									//product_name  product_sprice_size
+									var product_name = $(".name h3").text();
+									var product_price = $(".price01 span").text();
+									var product_size = $(".size span").text();
+									var product_sprice_size = product_price + "/" + product_size;
+									saveGoodCookie(product_name,product_sprice_size);
+									//以上已将商品的信息保存到cookie中去了
+									
+									//控制购物车的出现
+									$(".cover").css("display","block");
+									$(".shop-cart").css("display","block");
+								});
+								
+							})
+						</script>-->
+					
+					<div class="comment">
+						<div class="pull-left clearfix">
+                    		<h5 class="pull-left">甜度</h5>
+                    		<span class="pull-left">
+                       			<img src="img/circle-3.png">
+                    		</span>
+                		</div>
+                		<div class="pull-left clearfix">
+                    		<h5 class="pull-left">产地</h5>
+                    		<span class="pull-left">智利</span>
+                		</div>
+                		<div class="pull-left clearfix">
+                    		<h5 class="pull-left">存储方法</h5>
+                    		<span class="pull-left">0°冷藏</span>
+                		</div>
+                		<div class="pull-left clearfix">
+                    		<h5 class="pull-left">说明</h5>
+                    		<span class="pull-left">商品实际重量存在误差(±5%)</span>
+                		</div>
+                		<div class="pull-left clearfix">
+                    		<h5 class="pull-left">备注</h5>
+                    		<span class="pull-left">单个直径26-28mm</span>
+                		</div>
+                		<div class="pull-left clearfix">
+                    		<h5 class="pull-left">商品编号</h5>
+                    		<span class="pull-left">2151019111</span>
+                		</div>
+					</div>
+				</div>
+			</div>
+			<!--产品信息到此结束！！！-->
+			
+			<div style="width: 1230px; height: 68px;"></div>
+			
+			<!--产品简介和评论开始！！-->
+			<div class="assess">
+				<div class="main-assess">
+					<div id="js-fixed" class="clearfix" style="position: static;">
+						<span class="pull-left_1 cur_1 assess-btn" >商品简介</span>
+						<span class="pull-left_2 assess-btn">顾客评论 <b id="comment_total_top">(845)</b></span>
+						<a class="pull-right" title="加入购物车" role="button" class="add_car">加入购物车 
+							<i class="fa fa-shopping-cart fa-2x"></i>
+	                        <!--<div class="thefruit clearfix">
+	                           
+	                        </div>-->
+                    	</a>
+                    	
+						
+					</div>
+					<!--商品简介和用户评论的切换-->
+					<script type="text/javascript">
+						$(function(){
+							$(".assess-btn").click(function(){
+								if($(this)[0] == $(".pull-left_1")[0]){
+									console.log(1);
+									$(".no-1").css("display","block");
+									$(".no-2").css("display","none");
+									$(this).siblings().removeClass("cur_1");
+									$(this).addClass("cur_1");
+									$("#comment_total_top").removeClass("comment_total_top");
+								}else{
+									$(".no-1").css("display","none");
+									$(".no-2").css("display","block");
+									$(this).siblings().removeClass("cur_1");
+									$(this).addClass("cur_1");
+									$("#comment_total_top").addClass("comment_total_top");
+								}
+							});
+							
+						})
+					</script>
+					
+					<div class="good-comments">
+						<!--商品简介部分-->
+						<ul class="no-1">
+							<li>
+								<div class="app-detail">
+									<div class="app-detail-top">
+										<dl class="clearfix"><dt>产地</dt><dd>智利</dd></dl>
+										<dl class="clearfix"><dt>销售规格</dt><dd>2斤</dd></dl>
+										<dl class="clearfix"><dt>储藏方法</dt><dd>建议尽快食用或密封冷藏保存</dd></dl>
+										<dl class="clearfix"><dt>营养元素</dt><dd>花青素，铁，维生素A，胡萝卜素</dd></dl>
+									</div>
+									<img src="img/good-detail-1.jpg"/>
+									<img src="img/good-detail-2.jpg"/>
+									<img src="img/good-detail-3.jpg"/>
+									<img src="img/good-detail-4.jpg"/>
+									<img src="img/good-detail-5.jpg"/>
+									<img src="img/good-detail-6.jpg"/>
+									<img src="img/good-detail-7.jpg"/>
+									<img src="img/good-detail-8.jpg"/>
+									<img src="img/good-detail-9.jpg"/>
+									<img src="img/good-detail-10.jpg"/>
+									<img src="img/good-detail-11.jpg"/>
+									<img src="img/good-detail-12.jpg"/>
+								</div>
+							</li>
+						</ul>
+						
+						<!--商品评论部分-->
+						<ul class="no-2">
+							<div class="detail-title clearfix">
+								<div class="pull-left title_1">
+									<h3>95%</h3>
+									<p>好评度</p>
+								</div>
+								
+								<div class="pull-left title_2">
+									<div class="pl-user clearfix">
+	                                    <div class="green-user pull-left">不错哟</div>
+	                                    <div class="dengji-good pull-left">
+	                                        <div style="width: 95%;"></div>
+	                                    </div>
+	                                    <div class="dengji-number pull-left">95%</div>
+                                	</div>
+									<div class="pl-user clearfix">
+	                                    <div class="green-user pull-left">待提高</div>
+	                                    <div class="dengji-good pull-left">
+	                                        <div style="width: 5%;"></div>
+	                                    </div>
+	                                    <div class="dengji-number pull-left">5%</div>
+                                	</div>
+                                	<div class="pl-user clearfix">
+	                                    <div class="green-user pull-left">小失落</div>
+	                                    <div class="dengji-good pull-left">
+	                                        <div style="width: 0%;"></div>
+	                                    </div>
+	                                    <div class="dengji-number pull-left">0%</div>
+                                	</div>
+								</div>
+								
+								<div class="pull-left title_3">
+									<p>发布评价即可获10积分，</p>
+									<p>APP上传图片并晒单即可获得20积分，前5名可获双倍积分。</p>
+								</div>
+							</div>
+							<div class="user-comment">
+								<div class="detail-user-title clearfix">
+									<ul>
+										<!--now-orange这个class是给被选中的li的样式，默认第一个为选中-->
+										<li id="c_all" class="pull-left now-orange">
+                                        	<i class="fcon"></i>
+                                        	全部评论(<span id="comment_total">847</span>)
+                                    	</li>
+										<li class="pull-left" id="c_good">
+											<i class="fcon"></i>
+                                        	不错呦(<span id="comment_total">804</span>)
+										</li>
+										<li class="pull-left" id="c_normal">
+											<i class="fcon"></i>
+                                        	待提高(<span id="comment_total">43</span>)
+										</li>
+										<li class="pull-left" id="c_bad">
+											<i class="fcon"></i>
+                                        	小失落(<span id="comment_total">0</span>)
+										</li>
+									</ul>
+									<!--点击哪一个li就让i的背景变成黄色，即给li添加now-orange样式-->
+									<script type="text/javascript">
+										$(function(){
+											$(".detail-user-title li").click(function(){
+												$(this).siblings().removeClass("now-orange");
+												$(this).addClass("now-orange");
+											})
+										})
+									</script>
+								</div>
+								<div class="detail-allsay">
+									<div class="detail-allsaya_01">
+										
+									</div>
+								</div>
+								<div class="btn-toolbar">
+									<div class="comment-box-page clearfix">
+										<a class="jq-first"><首页</a>
+										<div class="prev">
+											<a>上一页</a>
+										</div>
+										<div class="pageNum">
+											
+										</div>
+										<div class="next">
+											<a>下一页</a>
+										</div>
+										<a class="jq-last">最后一页></a>
+									</div>
+								</div>
+							</div>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--分页功能-->
+		<script type="text/javascript">
+			
+			$(function(){
+				
+				
+				
+				var num = 10;//每页显示的个数
+                var n = 0;
+                var m = -num;//n为-10
+                
+                var page = function(_pageindex, _isgenerate,pageType){
+                	
+                	console.log(pageType);
+                	
+                	$.get("lib/page_json/comment.json", {'_': Math.random(), page: _pageindex},function(response){
+                		
+                		console.log(response);
+                		
+                		var pageNumber = Math.ceil(response.total / response.pageSize);
+                		
+                		//console.log(pageNumber);
+                		
+						var pageFlag = '';//用来放分页按钮
+						
+						if(!_isgenerate){
+							return false;
+						}
+						
+						//找到要装从服务器取过来的评论的容器
+						var oContainer = $(".detail-allsaya_01");
+						//定义一个变量：用来拼接评价字符串
+						var oComment = "";
+						
+						//========>以下是对分页按钮的实现
+						//清空放分页按钮的容器
+						$(".pageNum").empty();
+						
+						for(var i = 1; i <= pageNumber; i++){
+							pageFlag += ('<span>' + i + '</span>');
+						}
+						$(pageFlag).appendTo($(".pageNum"));
+						
+						var yy_m = response.pageSize * (_pageindex - 1);
+						var yy_n = yy_m + response.pageSize;
+						
+						//=========>以下是对“上一页”、“下一页”，“首页”，“尾页”的实现
+						if(n < response.res.length && pageType=="next"){ //下一页
+                                n += num;
+                                m += num;
+                            }else if(m > 0 && pageType=="prev"){ //上一页
+                                n -= num;
+                                m -= num;
+                            }else if(pageType=="first"){ //第一页
+                                n = num;
+                                m = 0;
+                            }else if(pageType=="last"){ //最后一页
+                                n = response.res.length;
+                                m = response.res.length%num == 0 ? (response.res.length - num):(response.res.length - response.res.length%num);
+                            }
+						
+						
+						$(oContainer).empty();//清空评论
+						$.each(response.res,function(i,val){
+							var star = "";
+                          	for(var j = 1; j <= val["grade"];j++){
+                           		star += "<span class='star'>" + "</span>";
+                           	}
+	                        if((i>=yy_m && i<yy_n) || (i>=m && i<n)){
+	                          oComment += "<div class='detail-user-says'>" + "<div class='tel'>" + val["tel"] + "</div>" + 
+                                   		    "<div class='grade clearfix'>" + "评分&nbsp&nbsp&nbsp&nbsp&nbsp" + star + "</div>" +
+                                   			"<div class='content'>" + "内容&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + val["content"] + "</div>" + 
+                                   			"<div class='date'>" + val["date"] + "</div>" + "</div>";
+	                        }
+	                    });
+						
+						$(oComment).appendTo($(oContainer));
+							
+                	})
+                	
+                }
+				page(1,true,"");
+				$(".pageNum > span").first().addClass("cur_2");
+				
+				$('.pageNum').on('click', function(evt){
+					page($(evt.target).text(),true,"");
+					console.log($(evt.target).text());
+					$(evt.target).siblings().removeClass("cur_2");
+					$(evt.target).addClass("cur_2");
+				
+				});
+				
+				$(".jq-first").click(function(){
+					page("",true,"first");
+				});
+				$(".jq-last").click(function(){
+					page("",true,"last");
+				});
+				$(".prev").click(function(){
+					page("",true,"prev");
+				});
+				$(".next").click(function(){
+					page("",true,"next");
+				});
+				
+				
+			})
+			
+			
+		</script>
+		
+		<!--购物车弹出框-->
+		<div class="dialogue"></div>
+		
+		<!--footer部分-->
+		<div class="footer"></div>
+	</body>
+</html>

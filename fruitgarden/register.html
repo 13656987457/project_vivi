@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<!--plugin_css-->
+		
+		<!--auto_css-->
+		<link rel="stylesheet" href="lib/common/common.css" />
+		<link rel="stylesheet" href="css/register.css" />
+		<link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css" />
+		
+		<!--plugin_js-->
+		<script type="text/javascript" src="lib/jquery/jquery-2.1.1.min.js" ></script>
+		
+		<!--auto_js-->
+		<script type="text/javascript" src="lib/common/common.js" ></script>
+		<script type="text/javascript" src="lib/js/base.js" ></script>
+		<script type="text/javascript" src="js/register.js" ></script>
+		
+		<script type="text/javascript">
+			$(function(){
+				
+				//从公共文件夹得到每个页面的公共的头部部分
+				$(".header").load("common_head.html?" + Math.random());
+				
+				$(".fa-repeat").click(function(){
+					//得到一个四位字母组成的随机验证码，放到.vali中去
+					var arr = [];
+					var str = [];
+					var num;
+					for(var i = 0; i < 4 ; i++){
+						num = parseInt(Math.random() * 25 + 65)
+						arr.push(num);
+						str.push(String.fromCharCode(num));
+					}
+					var randomString = str.join("");
+					$(".vali").text(randomString);
+				})
+				
+				// 表单验证:
+				//电话号码
+				$(".tel").blur(function(){
+					var pattern = /^[1-3]\d{10}$/;
+					if(pattern.test($(this).val()) == false){
+						$(".lab1").removeClass("fa fa-check");
+						$(".lab1").addClass("fa fa-times");
+						console.log("wrong");
+					}else{
+						console.log("correct");
+						$(".lab1").removeClass("fa fa-times");
+						$(".lab1").addClass("fa fa-check");
+					}
+				});
+				//密码
+				$("#pass").blur(function(){
+					if($(this).val().length < 6 || $(this).val().length > 20){
+						$(".lab2").removeClass("fa fa-check");
+						$(".lab2").addClass("fa fa-times");
+						console.log("wrong");
+					}else{
+						console.log("correct");
+						$(".lab2").removeClass("fa fa-times");
+						$(".lab2").addClass("fa fa-check");
+					}
+				});
+				
+				//确认密码
+				$(".checkPass").blur(function(){
+					if($(this).val() != $("#pass").val()){
+						$(".lab3").removeClass("fa fa-check");
+						$(".lab3").addClass("fa fa-times");
+					}else{
+						$(".lab3").removeClass("fa fa-times");
+						$(".lab3").addClass("fa fa-check");
+					}
+				});
+				
+				//验证码：
+				$(".code").blur(function(){
+					if($(this).val() != $(".vali").text()){
+						$(".lab4").removeClass("fa fa-check");
+						$(".lab4").addClass("fa fa-times");
+					}else{
+						$(".lab4").removeClass("fa fa-times");
+						$(".lab4").addClass("fa fa-check");
+					}
+				});
+				
+				//点击登录事件：
+				$(".login").click(function(){
+					location.href = "login.html";
+				});
+				
+				//从公共文件夹得到每个页面的公共的尾部部分
+				$(".footer").load("common_footer.html?" + Math.random());
+			})
+		</script>
+	</head>
+	<body>
+		<!--header部分-->
+		<div class="header"></div>
+		
+		<!--logo部分-->
+		<div class="logo">
+			<img src="img/register_1.jpg" href="main.html"/>
+		</div>
+		
+		<!--注册部分-->
+		<div class="reg">
+			<h3>注册会员</h3>
+			<div class="write">
+				<form>
+					<p>&nbsp;手机号<input type="text" class="tel"/><label class="lab1"></label></p>
+					
+					<p>&nbsp;&nbsp;密码<input type="text" name="passWord" placeholder="请输入6-20位号码字符" id="pass"/><label class="lab2"></label></p>
+
+					<p>确认密码<input type="text" name="checkPass" placeholder="请输入6-20位号码字符" class="checkPass"/><label class="lab3"></label></p>
+
+					<p>&nbsp;验证码<input type="text" class="code"/><span class="fa fa-repeat "></span><span class="vali">HJKL</span><label class="lab4"></label></p>
+					
+					<p class="btn"><input type="button" value="注册" class="submit"/><input type="button" value="会员登录" class="login"/></p>
+				</form>
+			</div>
+		</div>
+		
+		<!--footer部分-->
+		<div class="footer"></div>
+	</body>
+</html>

@@ -1,0 +1,135 @@
+.content{
+	width: 1230px;
+	margin: 0 auto;
+}
+
+/*筛选器*/
+.content .selector{
+	width: 1230px;
+	padding-top: 26px;
+	height: 195px;
+}
+.content .selector .oc{
+	width: 1230px;
+	padding: 12px 0 6px 0;
+	border-bottom:solid 1px #ccc
+}
+.content .selector .oc .pull-left{
+	float: left;
+	width: 28px;
+	height: 24px;
+	margin-right: 20px;
+	color: #999999;
+	line-height: 20px;
+	font-family: "microsoft yahei";
+	font-size: 14px;
+}
+.content .selector .oc .y-select{
+	float: left;
+	width: 1180px;
+}
+.content .selector .oc .y-select .all{
+	float: left;
+	width: 48px;
+	height: 24px;
+}
+.content .selector .oc .y-select .all a{
+	display: inline-block;
+	width: 30px;
+	height: 24px;
+	line-height: 24px;
+	background-color: #64a131;
+	font-size: 14px;
+    color: #fff;
+    padding: 0 9px;
+}
+.content .selector .oc .y-select .rightpart{
+	float: left;
+	width: 1130px;
+}
+.content .selector .oc .y-select .rightpart a{
+	display: inline-block;
+
+}
+.content .selector .oc .y-select .rightpart a span{
+	padding: 0 9px;
+	display: inline-block;
+	font-family: "microsoft yahei";
+	font-size: 14px;
+	height: 24px;
+	line-height: 24px;
+	font-weight: normal;
+}
+.content .selector .oc .y-select .last{
+	background-color: #f0f0f0;
+}
+
+/*列表页*/
+.content .y-list{
+	width: 1230px;
+	margin-top: 27px;
+	height: 1300px;
+}
+.content .y-list ul li{
+	float: left;
+	width: 234px;
+	height: 316px;
+	margin: 0 4px 8px 4px;
+}
+.content .y-list ul li .s-img a img{
+	width: 234px;
+	height: 244px;
+}
+.content .y-list ul li .s-info{
+	width: 231px;
+	height: 24px;
+	margin: 0 0 5px 3px ;
+	color: #333;
+	font-size: 14px;
+	font-family:"microsoft yahei"
+}
+.content .y-list ul li .s-info span{
+	float: right;
+	height: 24px;
+	line-height: 24px;
+	margin-right: 5px;
+	color: #999;
+	font-size:14px ;
+	font-family: "microsoft yahei";
+}
+.content .y-list ul li .s-operate{
+	width: 234px;
+	height: 344px;
+	padding-top: 3px;
+	position: relative;
+}
+.content .y-list ul li .s-operate .s-kg{
+	padding-left: 3px;
+    width: 190px;
+    height: 22px;
+    overflow: hidden;
+    float: left;
+}
+.content .y-list ul li .s-operate .s-kg span{
+	height: 22px;
+    border: 1px solid #dddddd;
+    border-radius: 2px;
+    text-align: center;
+    line-height: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 13px;
+    font-family: 'Hiragino Sans GB','Microsoft YaHei',sans-serif;
+    color: #999999;
+    margin-right: 18px;
+    cursor: pointer;
+}
+.content .y-list ul li .s-operate .s-car{
+	position: absolute;
+	right: 15px;
+	top: -3px;
+    width: 34px;
+    height: 34px;
+    background: url(../../img/s-car.gif) no-repeat;
+    cursor: pointer;
+}
